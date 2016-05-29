@@ -1,0 +1,35 @@
+Project Updates
+
+1. Project Basics
+Framework to be used : AngularJS for front end client
+Languages: HTML, CSS, JavaScript
+
+1.1 Brief Technical Description of the project
+It will be a SPA (Single Page Application) web app developed using the AngularJS framework. 
+
+2. Things to be done 
+
+2.1 Basic UI Design 0%
+The basic UI sketch has to be done ASAP. 
+
+2.2 Login function 0%
+Each user has to be able to log in to their own accounts. (For a start we don't have to link to their NUS accounts yet. Probably have a sign up page for them to create their own account.) 
+- Possibly use a hash table to save their log in details.
+- Possibly make use of cookies to cache their log in.
+
+2.3 Food Orders  0%
+Selection of food orders and special requests. (Can possibly put in some pictures and clickables instead of text boxes for the people to fill in). 
+
+2.4 Food Ready Alert  0%
+I don't think it is possible to create notifications on a webapp. (Alert 1.) Probably not a local phone notification but a browser server side notification. May not be a very good implementation.
+
+2.5 Counter for amount of orders  0%
+This may be quite easy to implement. Leave it for another day to discuss about it.
+
+2.6 Secured payment for food  0%
+Big challenge. May not be possible over the course of orbital.
+
+
+3. Log
+290516 : Still learning on AngularJS basics...
+
