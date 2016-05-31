@@ -33,4 +33,5 @@ Big challenge. May not be possible over the course of orbital.
 3. Log
 290516 : Still learning on AngularJS basics.
 300516 : Learnt AngularJS basics. Learning bootstrap for styling of webpage.
+310516 : Learnt Bootstrap. Starting on the basic UI of first page.
 
