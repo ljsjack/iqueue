@@ -1,297 +1,188 @@
-<!DOCTYPE HTML>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width = device-width, initial-scale = 1">
-        <title>iQueue | We queue for you</title>
+<div class="row">
+    <div class="text-center">
+        <h2>Sign Up</h2>
+    </div>
+</div>
+<!-- Sign up row -->
 
-    </head>
+<div class="container-fluid">
+    <div class="row">
+        <div class="text-center">
+            <h5>Fill up the form below to register!</h5>
+        </div>
+    </div>
+    <!-- End description div -->
 
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Start of Form -->
 
-    <body>
-
-        <!-- Navigation bar at the top of the page -->
-        <nav class="navbar navbar-default" style="background-color:#FFFFFF;">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped together for better mobile display-->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="frontpage.html">iQueue</a>
+    <!-- Username -->
+    <div class="row">
+        <div style="margin-top:2%;">
+            <div class="form-group">
+                <div class="col-xs-2 col-sm-1 col-sm-offset-3 col-md-1 col-md-offset-3 col-lg-1 col-lg-offset-3">
+                    <label class="control-label " for="username">Username:</label>
+                </div>
+                <div class="col-sm-5 col-md-5 col-lg-5 col-xs-8 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
+                    <input class="form-control" id="username" placeholder="Enter Username">
                 </div>
 
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                    <ul class="nav navbar-nav">
-                        <!-- Canteen Dropdown -->
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Canteens <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="deck.html">The Deck</a>
-                                </li>
-                                <li>
-                                    <a href="terrace.html">The Terrace</a>
-                                </li>
-                                <li>
-                                    <a href="frontier.html">The Frontier</a>
-                                </li>
-                                <li>
-                                    <a href="technoedge.html">Technoedge</a>
-                                </li>
-                                <li>
-                                    <a href="koufu.html">Koufu @ uTown</a>
-                                </li>
-                                <li>
-                                    <a href="foodclique.html">FoodClique @ uTown</a>
-                                </li>
-
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="aboutus.html">About Us</a>
-                        </li>
-                    </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-
-                        <!-- For the sign up/log in dropdown -->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login </a>
-                            <ul class="dropdown-menu" style="height:250px; width:250px;">
-
-                                <form role="form">
-                                    <div class="form-group" style="padding-left:15px; padding-right:15px">
-                                        <label for="loginid">Username:</label>
-                                        <input class="form-control" id="loginid">
-                                    </div>
-                                    <div class="form-group" style="padding-left:15px; padding-right:15px;">
-                                        <label for="pwd">Password:</label>
-                                        <input type="password" class="form-control" id="pwd">
-                                    </div>
-                                    <div class="checkbox" style="padding-left:15px;">
-                                        <label>
-                                            <input type="checkbox">
-                                            Remember me</label>
-                                    </div>
-
-                                    <button type="submit" class="btn btn-default" style="margin-left:15px;">
-                                        Submit
-                                    </button>
-
-                                    <a href="signup.html" style="float:right; margin-right:50px; margin-top:5px;">No account? Sign up here!</a>
-                                </form>
-
-                            </ul>
-                        </li>
-
-                    </ul>
-
-                </div>
-                <!--navbar collapse -->
-            </div>
-            <!--container-fluid -->
-
-        </nav>
-        <!--End of navigation bar -->
-
-        <div class="row">
-            <div class="text-center">
-                <h2>Sign Up</h2>
             </div>
         </div>
-        <!-- Sign up row -->
+    </div>
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="text-center">
-                    <h5>Fill up the form below to register!</h5>
+    <!-- Password -->
+    <div class="row">
+        <div style="margin-top:1%;">
+            <div class="form-group">
+                <div class="col-xs-2 col-sm-1 col-sm-offset-3 col-md-1 col-md-offset-3 col-lg-1 col-lg-offset-3">
+                    <label class="control-label " for="pwd">Password:</label>
+                </div>
+                <div class="col-sm-5 col-md-5 col-lg-5 col-xs-8 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter Password">
                 </div>
             </div>
-            <!-- End description div -->
+        </div>
+    </div>
 
-            <!-- Start of Form -->
-
-            <!-- Username -->
-            <div class="row">
-                <div style="margin-top:2%;">
+    <!-- Name -->
+    <div class="row">
+        <div style="margin-top: 1%;">
+            <div class="form-group">
+                <div class="col-xs-2 col-sm-1 col-sm-offset-3 col-md-1 col-md-offset-3 col-lg-1 col-lg-offset-3">
+                    <label class="control-label " for="name">Name:</label>
+                </div>
+                <!-- Salutation -->
+                <div class="col-xs-3 col-xs-offset-1 col-sm-1 col-md-1 col-lg-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
                     <div class="form-group">
-                        <div class="col-xs-2 col-sm-1 col-sm-offset-3 col-md-1 col-md-offset-3 col-lg-1 col-lg-offset-3">
-                            <label class="control-label " for="username">Username:</label>
-                        </div>
-                        <div class="col-sm-5 col-md-5 col-lg-5 col-xs-8 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
-                            <input class="form-control" id="username" placeholder="Enter Username">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Password -->
-            <div class="row">
-                <div style="margin-top:1%;">
-                    <div class="form-group">
-                        <div class="col-xs-2 col-sm-1 col-sm-offset-3 col-md-1 col-md-offset-3 col-lg-1 col-lg-offset-3">
-                            <label class="control-label " for="pwd">Password:</label>
-                        </div>
-                        <div class="col-sm-5 col-md-5 col-lg-5 col-xs-8 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
-                            <input type="password" class="form-control" id="pwd" placeholder="Enter Password">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Name -->
-            <div class="row">
-                <div style="margin-top: 1%;">
-                    <div class="form-group">
-                        <div class="col-xs-2 col-sm-1 col-sm-offset-3 col-md-1 col-md-offset-3 col-lg-1 col-lg-offset-3">
-                            <label class="control-label " for="name">Name:</label>
-                        </div>
-                        <!-- Salutation -->
-                        <div class="col-xs-3 col-xs-offset-1 col-sm-1 col-md-1 col-lg-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
-                            <div class="form-group">
-                                <select class="form-control" id="name">
-                                    <option>Mr</option>
-                                    <option>Mrs</option>
-                                    <option>Ms</option>
-                                    <option>Mdm</option>
-                                </select>
-                            </div>
-                        </div>
-                        <!-- First Name -->
-                        <div class="col-xs-5 col-sm-2 col-md-2 col-lg-2">
-                            <input class="form-control" placeholder="First Name">
-                        </div>
-                        <!-- Last Name -->
-                        <div class="col-xs-1 hidden-xs col-sm-2 col-md-2 col-lg-2">
-                            <input class="form-control" placeholder="Last Name">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Last Name on next row only for XS size -->
-            <div class="row">
-                <div class="col-xs-8 col-xs-offset-3 hidden-sm hidden-md hidden-lg hidden-xl">
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Last Name">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Email Address -->
-            <div class="row">
-                <div class="form-group">
-                    <div class="col-xs-2 col-sm-1 col-sm-offset-3 col-md-1 col-md-offset-3 col-lg-1 col-lg-offset-3">
-                        <label class="control-label " for="email">Email:</label>
-                    </div>
-                    <div class="col-xs-8 col-xs-offset-1 col-sm-5 col-md-5 col-lg-5 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
-                        <input class="form-control" id="email" placeholder="Enter Email Address">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div style="margin-top:1%;">
-                    <!-- Contact Number -->
-                    <div class="form-group">
-                        <div class="col-xs-2 col-sm-1 col-sm-offset-3 col-md-1 col-md-offset-3 col-lg-1 col-lg-offset-3">
-                            <label class="control-label " for="mobile">Mobile:</label>
-                        </div>
-                        <div class="col-xs-8 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0 col-sm-2 col-md-2 col-lg-2">
-                            <input type="number" class="form-control" id="mobile" placeholder="Enter Mobile No.">
-                        </div>
-
-                        <!-- Account Type -->
-                        <div class="col-xs-1 hidden-xs col-md-offset-0 col-lg-offset-0 col-sm-1 col-md-1 col-lg-1">
-                            <label class="control-label" for="type">Account:</label>
-                        </div>
-                        <div class="col-xs-1 hidden-xs col-sm-2 col-md-2 col-lg-2">
-                            <select class="form-control" id="type">
-                                <option>User</option>
-                                <option>StallHolder</option>
-                            </select>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="row hidden-sm hidden-md hidden-lg hidden-xl">
-                <div style="margin-top:15px;">
-                    <div class="col-xs-2 ">
-                        <label class="control-label" for="type">Account:</label>
-                    </div>
-                    <div class="col-xs-5 col-xs-offset-1">
-                        <select class="form-control" id="type">
-                            <option>User</option>
-                            <option>StallHolder</option>
+                        <select class="form-control" id="name">
+                            <option>Mr</option>
+                            <option>Mrs</option>
+                            <option>Ms</option>
+                            <option>Mdm</option>
                         </select>
                     </div>
                 </div>
+                <!-- First Name -->
+                <div class="col-xs-5 col-sm-2 col-md-2 col-lg-2">
+                    <input class="form-control" placeholder="First Name">
+                </div>
+                <!-- Last Name -->
+                <div class="col-xs-1 hidden-xs col-sm-2 col-md-2 col-lg-2">
+                    <input class="form-control" placeholder="Last Name">
+                </div>
+
             </div>
+        </div>
+    </div>
 
-            <!-- Terms and Conditions PopUp -->
-            <div class="row">
-                <div style="margin-top:20px;">
-                    <div class="col-xs-2 col-sm-3 col-sm-offset-3 col-md-1 col-md-offset-3 col-lg-1 col-lg-offset-3;">
-                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
-                            Terms & Conditions
-                        </button>
-                    </div>
+    <!-- Last Name on next row only for XS size -->
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-3 hidden-sm hidden-md hidden-lg hidden-xl">
+            <div class="form-group">
+                <input class="form-control" placeholder="Last Name">
+            </div>
+        </div>
+    </div>
 
-                    <!-- Submit Button -->
-                    <div class="col-xs-3 col-xs-offset-6 col-sm-4 col-sm-offset-2 col-md-1 col-md-offset-4 col-lg-1 col-lg-offset-4;">
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-default">
-                                Submit
-                            </button>
-                        </div>
-                    </div>
+    <!-- Email Address -->
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-2 col-sm-1 col-sm-offset-3 col-md-1 col-md-offset-3 col-lg-1 col-lg-offset-3">
+                <label class="control-label " for="email">Email:</label>
+            </div>
+            <div class="col-xs-8 col-xs-offset-1 col-sm-5 col-md-5 col-lg-5 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
+                <input class="form-control" id="email" placeholder="Enter Email Address">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div style="margin-top:1%;">
+            <!-- Contact Number -->
+            <div class="form-group">
+                <div class="col-xs-2 col-sm-1 col-sm-offset-3 col-md-1 col-md-offset-3 col-lg-1 col-lg-offset-3">
+                    <label class="control-label " for="mobile">Mobile:</label>
+                </div>
+                <div class="col-xs-8 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0 col-sm-2 col-md-2 col-lg-2">
+                    <input type="number" class="form-control" id="mobile" placeholder="Enter Mobile No.">
                 </div>
 
-                <!-- The Terms and Conditions Popup -->
-                <div id="myModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">
-                                    &times;
-                                </button>
-                                <h4 class="modal-title">Terms & Conditions</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>
-                                    We own whatever information you decide to put here.
-                                </p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
+                <!-- Account Type -->
+                <div class="col-xs-1 hidden-xs col-md-offset-0 col-lg-offset-0 col-sm-1 col-md-1 col-lg-1">
+                    <label class="control-label" for="type">Account:</label>
                 </div>
-
+                <div class="col-xs-1 hidden-xs col-sm-2 col-md-2 col-lg-2">
+                    <select class="form-control" id="type">
+                        <option>User</option>
+                        <option>StallHolder</option>
+                    </select>
+                </div>
             </div>
 
         </div>
-        <!-- End div for container -->
+    </div>
 
-    </body>
-</html>
+    <div class="row hidden-sm hidden-md hidden-lg hidden-xl">
+        <div style="margin-top:15px;">
+            <div class="col-xs-2 ">
+                <label class="control-label" for="type">Account:</label>
+            </div>
+            <div class="col-xs-5 col-xs-offset-1">
+                <select class="form-control" id="type">
+                    <option>User</option>
+                    <option>StallHolder</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms and Conditions PopUp -->
+    <div class="row">
+        <div style="margin-top:20px;">
+            <div class="col-xs-2 col-sm-3 col-sm-offset-3 col-md-1 col-md-offset-3 col-lg-1 col-lg-offset-3;">
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                    Terms & Conditions
+                </button>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-xs-3 col-xs-offset-6 col-sm-4 col-sm-offset-2 col-md-1 col-md-offset-4 col-lg-1 col-lg-offset-4;">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Terms and Conditions Popup -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+                        <h4 class="modal-title">Terms & Conditions</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            We own whatever information you decide to put here.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- End div for container -->
