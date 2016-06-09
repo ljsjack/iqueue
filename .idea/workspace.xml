@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1ff896d-bcf8-4f0c-8aa3-fdfe35e8bf50" name="Default" comment="" />
+    <list default="true" id="e1ff896d-bcf8-4f0c-8aa3-fdfe35e8bf50" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="iQueueProj.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +39,8 @@
       <file leaf-file-name="firstpage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html pages/firstpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+            <state relative-caret-position="270">
+              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -267,12 +269,12 @@
       <updated>1465394888486</updated>
       <workItem from="1465394889733" duration="2636000" />
       <workItem from="1465400044632" duration="1000" />
-      <workItem from="1465440428310" duration="5295000" />
+      <workItem from="1465440428310" duration="5719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7932000" />
+    <option name="totallyTimeSpent" value="8356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="45" width="891" height="647" extended-state="0" />
@@ -431,8 +433,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html pages/firstpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        <state relative-caret-position="270">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
