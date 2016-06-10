@@ -1,0 +1,23 @@
+{
+  "name": "iqueueproj",
+  "version": "1.0.0",
+  "description": "iQueue Project README",
+  "main": "index.js",
+  "dependencies": {
+    "express-jwt": "^3.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljsjack/iqueue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ljsjack/iqueue/issues"
+  },
+  "homepage": "https://github.com/ljsjack/iqueue#readme"
+}
