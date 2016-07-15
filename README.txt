@@ -25,3 +25,4 @@ To minimise overcrowding at any canteen at any specific time, our application wi
 With an electronic payment, a smooth transaction can be made between the patrons and the stall owners. The stall owners will not have to worry about collecting payment and giving out change, thus decreasing the time spent queueing. This will be significant especially during the peak hours.
 
 test
+banana eh
