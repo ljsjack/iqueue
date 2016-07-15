@@ -1,3 +1,10 @@
 .backgroundimages {
 	background-image: url("deck.jpg");
 }
+
+.right {
+	float: right;
+	width: 500px;
+
+	padding: 80px 0px;
+}
