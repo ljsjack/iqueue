@@ -4,6 +4,10 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
     <orderEntry type="library" name="iQueueProj node_modules" level="project" />
+=======
+    <orderEntry type="library" name="iqueue node_modules" level="project" />
+>>>>>>> 513e08f96cba49aeedc6a0533bae929ccb556a53
   </component>
 </module>
