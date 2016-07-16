@@ -282,12 +282,20 @@
       <updated>1468559188006</updated>
       <workItem from="1468559190258" duration="13439000" />
       <workItem from="1468651534449" duration="5558000" />
+<<<<<<< HEAD
       <workItem from="1468659452330" duration="176000" />
+=======
+      <workItem from="1468659452330" duration="83000" />
+>>>>>>> ivlelogin
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="19173000" />
+=======
+    <option name="totallyTimeSpent" value="19080000" />
+>>>>>>> ivlelogin
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="707" extended-state="6" />
