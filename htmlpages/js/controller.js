@@ -34,23 +34,41 @@ app.config(function($routeProvider){
             templateUrl: 'foodclique.html'
         })
         .when('/loggedin', {
-            templateUrl: 'loggedin.html'
-        })
-        .when('/loggedin/:type', {
-            templateUrl: 'loggedin.html'
-        })
-        .when('/loggedin/:type/:id',{
-            templateUrl: 'loggedin.html'
+            templateUrl: 'loggedin.html',
         })
         .otherwise({
             redirectTo: '/'
         });
 });
 
-app.controller('logInCtrl',function($scope, $location){
+
+
+app.controller('logInCtrl',function($scope, $location, $rootScope){
     var apiKey = "BjCvF8PqrwKfRZkH6cjLf";
+
     $scope.ivleLogInUrl = "https://ivle.nus.edu.sg/api/login/?apikey=" + apiKey + "&url=" + $location.absUrl() + "#/loggedin"
+    var currUrl = $location.absUrl();
+    var indexToken = currUrl.search("token");
+    $rootScope.token = "hello";
 
-})
+    if (indexToken > 0){
+        var endIndex = currUrl.search("#");
+        $rootScope.token = currUrl.substring(indexToken + 6,endIndex);
+
+        // For retrieving ivle user information.
+        //var xhr = new XMLHttpRequest();
+        //xhr.open('GET', "http://ipinfo.io/json", true);
 
 
+        $location.path("/loggedin");
+    }
+
+
+});
+
+
+
+app.controller('overallCtrl', function($rootScope, $location){
+
+
+});

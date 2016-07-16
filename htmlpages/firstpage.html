@@ -1,86 +1,90 @@
 <div class="container">
     <div class="row">
-        <div class="text-center">
-            <h2>iQueue</h2>
-        </div>
+        <!-- Navigation bar at the top of the page -->
+        <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#FFFFFF;">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped together for better mobile display-->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/mainpage.html">iQueue</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav">
+                        <!-- Canteen Dropdown -->
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Canteens <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#/deck">The Deck</a>
+                                </li>
+                                <li>
+                                    <a href="#/terrace">The Terrace</a>
+                                </li>
+                                <li>
+                                    <a href="#/frontier">The Frontier</a>
+                                </li>
+                                <li>
+                                    <a href="#/technoedge">Technoedge</a>
+                                </li>
+                                <li>
+                                    <a href="#/koufu">Koufu @ uTown</a>
+                                </li>
+                                <li>
+                                    <a href="#foodclique">FoodClique @ uTown</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#/aboutus">About Us</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <!-- For the sign up/log in dropdown -->
+                        <li>
+                            <div ng-controller="logInCtrl">
+                                <a ng-href="{{ivleLogInUrl}}" class="btn btn-info" role="button">
+                                    <span class="glyphicon glyphicon-log-in"></span> Login with IVLE</button></a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!--navbar collapse -->
+            </div>
+            <!--container-fluid -->
+
+        </nav>
     </div>
-
-
-    <!-- First Row of canteens -->
-    <div class="row">
-        <div style="margin-top:2%;">
-            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <a href="#/deck">
-                    <div class="thumbnail" style="margin-left:10px;">
-                        <img src="images/deck1.jpg" class="img-rounded" alt="The Deck">
-                        <br>
-                        <p class="text-center">The Deck @ Arts</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <a href="#/terrace">
-                    <div class="thumbnail">
-                        <img src="images/terrace1.jpg" class="img-rounded" alt="The Terrace">
-                        <br>
-                        <p class="text-center">The Terrace @ Biz</p>
-                    </div>
-                </a>
-            </div>
-
-
-            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <a href="#/frontier">
-                    <div class="thumbnail" style="margin-right:10px;">
-                        <img src="images/frontier1.jpg" class="img-rounded" alt="The Frontier">
-                        <br>
-                        <p class="text-center">The Frontier @ Science</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Second Row of Canteens -->
-    <div class="row">
-        <div style="margin-top:1%">
-            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <a href="#/technoedge">
-                    <div class="thumbnail" style="margin-left:10px;">
-                        <img src="images/technoedge1.jpg" class="img-rounded" alt="Technoedge">
-                        <br>
-                        <p class="text-center">Techno Edge @ Engineering</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <a href="#/koufu">
-                    <div class="thumbnail">
-                        <img src="images/koufu1.jpg" class="img-rounded" alt="Koufu">
-                        <br>
-                        <p class="text-center">Koufu @ uTown</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <a href="#/foodclique">
-                    <div class="thumbnail" style="margin-right:10px;">
-                        <img src="images/foodclique1.jpg" class="img-rounded" alt="Food Clique">
-                        <br>
-                        <p class="text-center">Food Clique @ uTown</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-<div class="row">
-
-
 </div>
+
+<br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="text-center">
+            <h2>YET TO SIGN IN </h2><br>
+
+        </div>
+    </div>
+
+
+
+    <div class="row">
+
+
+    </div>
 
 
 
