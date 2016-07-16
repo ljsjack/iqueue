@@ -55,17 +55,26 @@ app.controller('logInCtrl',function($scope, $location, $rootScope){
     if (indexToken > 0){
         var endIndex = currUrl.search("#");
         $rootScope.token = currUrl.substring(indexToken + 6,endIndex);
+        $location.path("/loggedin");
 
         // For retrieving ivle user information.
-        /*
+
         var xhr = new XMLHttpRequest();
         xhr.open('GET', "https://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey="
             + apiKey + "&Token=" + $rootScope.token, true);
         xhr.send();
-        xhr.addEventListener("readystatechange", processRequest, false);
-        */
 
-        $location.path("/loggedin");
+        xhr.onreadystatechange = processRequest;
+
+        function processRequest(e) {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                $rootScope.username = JSON.parse(xhr.responseText);
+            }
+        }
+
+        xhr.addEventListener("readystatechange", processRequest, false);
+
+
     }
 
 
