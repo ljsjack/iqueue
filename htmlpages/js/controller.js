@@ -56,9 +56,12 @@ app.controller('logInCtrl',function($scope, $location, $rootScope){
         $rootScope.token = currUrl.substring(indexToken + 6,endIndex);
 
         // For retrieving ivle user information.
-        //var xhr = new XMLHttpRequest();
-        //xhr.open('GET', "http://ipinfo.io/json", true);
-
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', "https://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey="
+            + apiKey + "&Token=" + $rootScope.token, true);
+        xhr.send();
+        xhr.addEventListener("readystatechange", processRequest, false);
+        
 
         $location.path("/loggedin");
     }
