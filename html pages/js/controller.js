@@ -33,7 +33,24 @@ app.config(function($routeProvider){
         .when('/foodclique',{
             templateUrl: 'foodclique.html'
         })
+        .when('/loggedin', {
+            templateUrl: 'loggedin.html'
+        })
+        .when('/loggedin/:type', {
+            templateUrl: 'loggedin.html'
+        })
+        .when('/loggedin/:type/:id',{
+            templateUrl: 'loggedin.html'
+        })
         .otherwise({
             redirectTo: '/'
         });
 });
+
+app.controller('logInCtrl',function($scope, $location){
+    var apiKey = "BjCvF8PqrwKfRZkH6cjLf";
+    $scope.ivleLogInUrl = "https://ivle.nus.edu.sg/api/login/?apikey=" + apiKey + "&url=" + $location.absUrl() + "/loggedin"
+
+})
+
+
