@@ -49,7 +49,7 @@ app.config(function($routeProvider){
 
 app.controller('logInCtrl',function($scope, $location){
     var apiKey = "BjCvF8PqrwKfRZkH6cjLf";
-    $scope.ivleLogInUrl = "https://ivle.nus.edu.sg/api/login/?apikey=" + apiKey + "&url=" + $location.absUrl() + "loggedin"
+    $scope.ivleLogInUrl = "https://ivle.nus.edu.sg/api/login/?apikey=" + apiKey + "&url=" + $location.absUrl() + "#/loggedin"
 
 })
 
