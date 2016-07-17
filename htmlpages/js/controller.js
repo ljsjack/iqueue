@@ -36,6 +36,9 @@ app.config(function($routeProvider){
         .when('/loggedin', {
             templateUrl : 'loggedin.html'
         })
+        .when('/account',{
+            templateUrl : 'account.html'
+        })
         .otherwise({
             redirectTo: '/'
         });
@@ -50,7 +53,6 @@ app.controller('logInCtrl',function($scope, $location, $rootScope){
     $scope.ivleLogInUrl = "https://ivle.nus.edu.sg/api/login/?apikey=" + apiKey + "&url=" + $location.absUrl() + "#/loggedin"
     var currUrl = $location.absUrl();
     var indexToken = currUrl.search("token");
-    $rootScope.token = "hello";
 
     if (indexToken > 0){
         var endIndex = currUrl.search("#");
@@ -58,7 +60,7 @@ app.controller('logInCtrl',function($scope, $location, $rootScope){
         $location.path("/loggedin");
 
         // For retrieving ivle user information.
-
+        /*
         var xhr = new XMLHttpRequest();
         xhr.open('GET', "https://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey="
             + apiKey + "&Token=" + $rootScope.token, true);
@@ -73,7 +75,7 @@ app.controller('logInCtrl',function($scope, $location, $rootScope){
         }
 
         xhr.addEventListener("readystatechange", processRequest, false);
-
+        */
 
     }
 
