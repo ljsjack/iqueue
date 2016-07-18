@@ -1,99 +1,65 @@
-var app = angular.module("iqueue",['ngRoute']);
+var app = angular.module("iqueue",['ui.router']);
 
-app.config(function($routeProvider){
-    $routeProvider
-        .when('/',{
+app.config(function($stateProvider, $urlRouterProvider){
+
+    $urlRouterProvider.otherwise('/home');
+
+    $stateProvider
+
+        .state('home', {
+            url: '/home',
             templateUrl: 'firstpage.html'
         })
-        .when('/mainpage',{
-            templateUrl: 'firstpage.html'
-        })
 
-        .when('/aboutus',{
+        .state('aboutus', {
+            url: '/aboutus',
             templateUrl: 'aboutus.html'
         })
-        .when('/signup',{
-            templateUrl: 'signup.html'
-        })
-        .when('/deck',{
+
+        .state('deck', {
+            url: '/deck',
             templateUrl: 'deck.html'
         })
-        .when('/terrace',{
+
+        .state('terrace', {
+            url: '/terrace',
             templateUrl: 'terrace.html'
         })
-        .when('/frontier',{
+
+        .state('frontier', {
+            url: '/frontier',
             templateUrl: 'frontier.html'
         })
-        .when('/technoedge',{
+
+        .state('technoedge', {
+            url: '/technoedge',
             templateUrl: 'technoedge.html'
         })
-        .when('/koufu',{
+
+        .state('koufu', {
+            url: '/koufu',
             templateUrl: 'koufu.html'
         })
-        .when('/foodclique',{
+
+        .state('foodclique', {
+            url: '/foodclique',
             templateUrl: 'foodclique.html'
         })
-        .when('/loggedin', {
+
+        .state('loggedin', {
+            url: '/loggedin',
             templateUrl : 'loggedin.html'
         })
-        .when('/account',{
+
+        .state('account', {
+            url: '/account',
             templateUrl : 'account.html'
         })
-        .otherwise({
-            redirectTo: '/'
-        });
 });
 
 
-
-
-app.controller('logInCtrl',function($scope, $location, $rootScope){
-    var apiKey = "BjCvF8PqrwKfRZkH6cjLf";
-
-    $scope.ivleLogInUrl = "https://ivle.nus.edu.sg/api/login/?apikey=" + apiKey + "&url=" + $location.absUrl() + "#/loggedin"
-    var currUrl = $location.absUrl();
-    var indexToken = currUrl.search("token");
-
-    if (indexToken > 0){
-        var endIndex = currUrl.search("#");
-        $rootScope.token = currUrl.substring(indexToken + 6,endIndex);
-        $location.path("/loggedin");
-
-        // For retrieving ivle user information.
-        /*
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', "https://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey="
-            + apiKey + "&Token=" + $rootScope.token, true);
-        xhr.send();
-
-        xhr.onreadystatechange = processRequest;
-
-        function processRequest(e) {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                $rootScope.username = JSON.parse(xhr.responseText);
-            }
-        }
-
-        xhr.addEventListener("readystatechange", processRequest, false);
-        */
-
-    }
-
-
-});
-
-app.controller('firstPageCtrl', function($location, $scope){
-
-    var apiKey = "BjCvF8PqrwKfRZkH6cjLf";
-
-    $scope.ivleLogInUrl = "https://ivle.nus.edu.sg/api/login/?apikey=" + apiKey + "&url=" + $location.absUrl() + "#/loggedin"
-    var currUrl = $location.absUrl();
-    var indexToken = currUrl.search("token");
-
-})
-
-
-
+/* Overall controller for the app
+ */
 
 app.controller('overallCtrl', function($rootScope, $location){
     var currUrl = $location.absUrl();
@@ -101,7 +67,43 @@ app.controller('overallCtrl', function($rootScope, $location){
     if (indexToken > 0) {
         var endIndex = currUrl.search("#");
         $rootScope.token = currUrl.substring(indexToken + 6, endIndex);
-        $location.path("/loggedin");
+        $location.path("/loggedin").replace();
     }
 
+
+
+
+    // For retrieving ivle user information.
+    /*
+     var xhr = new XMLHttpRequest();
+     xhr.open('GET', "https://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey="
+     + apiKey + "&Token=" + $rootScope.token, true);
+     xhr.send();
+
+     xhr.onreadystatechange = processRequest;
+
+     function processRequest(e) {
+     if (xhr.readyState == 4 && xhr.status == 200) {
+     $rootScope.username = JSON.parse(xhr.responseText);
+     }
+     }
+
+     xhr.addEventListener("readystatechange", processRequest, false);
+     */
+
 });
+
+/* This is the controller for the unloggedin default page.
+ */
+
+app.controller('firstPageCtrl', function($location, $scope){
+
+    // This is the URL for IVLE log in.
+    var apiKey = "BjCvF8PqrwKfRZkH6cjLf";
+    $scope.ivleLogInUrl = "https://ivle.nus.edu.sg/api/login/?apikey=" + apiKey + "&url=" + $location.absUrl() + "#/loggedin"
+
+})
+
+
+
+
