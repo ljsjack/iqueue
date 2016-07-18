@@ -9,7 +9,7 @@
 
 
 
-<div class="container">
+<div class="container" ng-controller="firstPageCtrl">
     <div class="row">
         <!-- Navigation bar at the top of the page -->
         <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#FFFFFF;">
@@ -38,7 +38,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Log in button -->
                         <li>
-                            <a ng-controller="logInCtrl" ng-href="{{ivleLogInUrl}}"><span class="glyphicon glyphicon-log-in"></span>
+                            <a ng-href="{{ivleLogInUrl}}"><span class="glyphicon glyphicon-log-in"></span>
                                 Log In with IVLE</a>
 
                         </li>

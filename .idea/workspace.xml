@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3d09f5a-0f97-4c0a-8d09-a3a68a647f60" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlpages/defaultpage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlpages/loginauthenticated.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlpages/mainpage.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/aboutus.html" afterPath="$PROJECT_DIR$/htmlpages/aboutus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/deck.html" afterPath="$PROJECT_DIR$/htmlpages/deck.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/foodclique.html" afterPath="$PROJECT_DIR$/htmlpages/foodclique.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/frontier.html" afterPath="$PROJECT_DIR$/htmlpages/frontier.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/firstpage.html" afterPath="$PROJECT_DIR$/htmlpages/firstpage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/index.html" afterPath="$PROJECT_DIR$/htmlpages/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/js/controller.js" afterPath="$PROJECT_DIR$/htmlpages/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/koufu.html" afterPath="$PROJECT_DIR$/htmlpages/koufu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/loggedin.html" afterPath="$PROJECT_DIR$/htmlpages/loggedin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/technoedge.html" afterPath="$PROJECT_DIR$/htmlpages/technoedge.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/terrace.html" afterPath="$PROJECT_DIR$/htmlpages/terrace.html" />
     </list>
     <ignored path="iQueueProj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +30,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmlpages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-67">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="23">
+              <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -50,8 +40,8 @@
       <file leaf-file-name="firstpage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmlpages/firstpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="53" column="10" selection-start-line="12" selection-start-column="4" selection-end-line="53" selection-end-column="10" />
+            <state relative-caret-position="600">
+              <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -60,8 +50,8 @@
       <file leaf-file-name="controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/htmlpages/js/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="602">
+              <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -93,10 +83,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/htmlpages/index.html" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/htmlpages/firstpage.html" />
-        <option value="$PROJECT_DIR$/htmlpages/js/controller.js" />
         <option value="$PROJECT_DIR$/htmlpages/loggedin.html" />
         <option value="$PROJECT_DIR$/htmlpages/account.html" />
         <option value="$PROJECT_DIR$/htmlpages/aboutus.html" />
@@ -106,6 +93,9 @@
         <option value="$PROJECT_DIR$/htmlpages/koufu.html" />
         <option value="$PROJECT_DIR$/htmlpages/technoedge.html" />
         <option value="$PROJECT_DIR$/htmlpages/terrace.html" />
+        <option value="$PROJECT_DIR$/htmlpages/index.html" />
+        <option value="$PROJECT_DIR$/htmlpages/firstpage.html" />
+        <option value="$PROJECT_DIR$/htmlpages/js/controller.js" />
       </list>
     </option>
   </component>
@@ -118,7 +108,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="1" />
+    <option name="y" value="24" />
     <option name="width" value="1280" />
     <option name="height" value="707" />
   </component>
@@ -279,15 +270,15 @@
       <updated>1468660708091</updated>
       <workItem from="1468660709285" duration="3000" />
       <workItem from="1468660760393" duration="299000" />
-      <workItem from="1468661063218" duration="6574000" />
+      <workItem from="1468661063218" duration="9572000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6876000" />
+    <option name="totallyTimeSpent" value="9874000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="707" extended-state="6" />
+    <frame x="1" y="24" width="1280" height="707" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15011914" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -373,26 +364,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/htmlpages/account.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
           <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/firstpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="53" column="10" selection-start-line="12" selection-start-column="4" selection-end-line="53" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -453,6 +428,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/htmlpages/loggedin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -461,10 +444,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/firstpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/htmlpages/js/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="602">
+          <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
           <folding />
         </state>
       </provider>

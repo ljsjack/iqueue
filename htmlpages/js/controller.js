@@ -82,9 +82,26 @@ app.controller('logInCtrl',function($scope, $location, $rootScope){
 
 });
 
+app.controller('firstPageCtrl', function($location, $scope){
+
+    var apiKey = "BjCvF8PqrwKfRZkH6cjLf";
+
+    $scope.ivleLogInUrl = "https://ivle.nus.edu.sg/api/login/?apikey=" + apiKey + "&url=" + $location.absUrl() + "#/loggedin"
+    var currUrl = $location.absUrl();
+    var indexToken = currUrl.search("token");
+
+})
+
+
 
 
 app.controller('overallCtrl', function($rootScope, $location){
-
+    var currUrl = $location.absUrl();
+    var indexToken = currUrl.search("token");
+    if (indexToken > 0) {
+        var endIndex = currUrl.search("#");
+        $rootScope.token = currUrl.substring(indexToken + 6, endIndex);
+        $location.path("/loggedin");
+    }
 
 });
