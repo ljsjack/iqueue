@@ -1,6 +1,5 @@
 <div class="container">
-
-    <div class="row" ng-controller="firstPageCtrl">
+    <div class="row">
         <!-- Navigation bar at the top of the page -->
         <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#FFFFFF;">
             <div class="container-fluid">
@@ -19,18 +18,40 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav">
+                        <!-- Canteen Dropdown -->
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Canteens <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a ui-sref="deck">The Deck</a>
+                                </li>
+                                <li>
+                                    <a ui-sref="terrace">The Terrace</a>
+                                </li>
+                                <li>
+                                    <a ui-sref="frontier">The Frontier</a>
+                                </li>
+                                <li>
+                                    <a ui-sref="technoedge">Technoedge</a>
+                                </li>
+                                <li>
+                                    <a ui-sref="koufu">Koufu @ uTown</a>
+                                </li>
+                                <li>
+                                    <a ui-sref="foodclique">FoodClique @ uTown</a>
+                                </li>
 
+                            </ul>
+                        </li>
                         <li>
                             <a ui-sref="aboutus">About Us</a>
                         </li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- Log in button -->
                         <li>
-                            <a ng-href="{{ivleLogInUrl}}"><span class="glyphicon glyphicon-log-in"></span>
-                                Log In with IVLE</a>
-
+                            <a ui-sref="account">Account</a>
                         </li>
 
                     </ul>
@@ -42,25 +63,18 @@
 
         </nav>
     </div>
-
+<br><br><br><br>
 
     <div class="row">
         <div class="text-center">
-            <h2>About Us</h2><br><br>
+            <h2>LOGGED IN. HELLO </h2><br>
+            <a ng-href="authUrl">Try me</a>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-            <div class="text-center">
 
-                An orbital project by Brehmer Chan Xi Quan and Low Jian Sheng.<br>
 
-            </div>
-        </div>
-    </div>
+
+
+
 </div>
-
-
-
-
