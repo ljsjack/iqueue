@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3d09f5a-0f97-4c0a-8d09-a3a68a647f60" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlpages/js/controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlpages/js/login.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/index.html" afterPath="$PROJECT_DIR$/htmlpages/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/account.html" afterPath="$PROJECT_DIR$/htmlpages/views/account.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/deck.html" afterPath="$PROJECT_DIR$/htmlpages/views/deck.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/foodclique.html" afterPath="$PROJECT_DIR$/htmlpages/views/foodclique.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/frontier.html" afterPath="$PROJECT_DIR$/htmlpages/views/frontier.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/koufu.html" afterPath="$PROJECT_DIR$/htmlpages/views/koufu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/mainctrl.js" afterPath="$PROJECT_DIR$/htmlpages/mainctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/loggedin.html" afterPath="$PROJECT_DIR$/htmlpages/views/loggedin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/technoedge.html" afterPath="$PROJECT_DIR$/htmlpages/views/technoedge.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/terrace.html" afterPath="$PROJECT_DIR$/htmlpages/views/terrace.html" />
     </list>
     <ignored path="iQueueProj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loggedin.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loggedin.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/htmlpages/views/loggedin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+            <state relative-caret-position="345">
+              <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -56,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainctrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainctrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmlpages/mainctrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="302">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+              <caret line="99" column="32" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -106,8 +96,8 @@
         <option value="$PROJECT_DIR$/htmlpages/views/technoedge.html" />
         <option value="$PROJECT_DIR$/htmlpages/views/terrace.html" />
         <option value="$PROJECT_DIR$/htmlpages/index.html" />
-        <option value="$PROJECT_DIR$/htmlpages/views/loggedin.html" />
         <option value="$PROJECT_DIR$/htmlpages/mainctrl.js" />
+        <option value="$PROJECT_DIR$/htmlpages/views/loggedin.html" />
       </list>
     </option>
   </component>
@@ -319,12 +309,12 @@
       <workItem from="1468660760393" duration="299000" />
       <workItem from="1468661063218" duration="12792000" />
       <workItem from="1468826787649" duration="2042000" />
-      <workItem from="1468829998175" duration="15495000" />
+      <workItem from="1468829998175" duration="17336000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30631000" />
+    <option name="totallyTimeSpent" value="32472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="707" extended-state="0" />
@@ -644,14 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/loggedin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/htmlpages/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -663,7 +645,15 @@
     <entry file="file://$PROJECT_DIR$/htmlpages/mainctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <caret line="99" column="32" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/loggedin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
           <folding />
         </state>
       </provider>

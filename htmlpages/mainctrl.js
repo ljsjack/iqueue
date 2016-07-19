@@ -92,15 +92,12 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope){
 
         var uNameUrl = $rootScope.baseUrl + "/UserName_Get?APIKey=" + $rootScope.apiKey + "&Token=" + $rootScope.token;
 
-        var uNameUrlJsonP = uNameUrl + "?callback=JSON_CALLBACK";
+        var uNameUrlJsonP = "https://crossorigin.me/" + uNameUrl;
         console.log(uNameUrl);
-        $http.jsonp(uNameUrlJsonP)
-            .success(function (data, status, headers, config) {
-                $scope.details = data;
-            })
-            .error(function(data,status,headers,config){
-                $scope.statusval = status;
-                console.log($scope.statusval);
+        console.log(uNameUrlJsonP);
+        $http.get(uNameUrlJsonP)
+            .then(function(response){
+                $rootScope.uName = response.data;
             })
 
 
