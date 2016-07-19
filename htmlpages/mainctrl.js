@@ -1,4 +1,4 @@
-var app = angular.module("iqueue",['ui.router']);
+var app = angular.module("iqueue",['ui.router', 'ngStorage']);
 
 app.config(function($urlRouterProvider, $stateProvider, $httpProvider){
 
@@ -73,10 +73,11 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider){
 /* Overall controller for the app
  */
 
-app.controller('overallCtrl', function($rootScope, $location, $http, $scope){
+app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $localStorage){
 
     $rootScope.apiKey = "BjCvF8PqrwKfRZkH6cjLf";
     $rootScope.baseUrl = "https://ivle.nus.edu.sg/api/Lapi.svc";
+
 
     var currUrl = $location.absUrl();
     var indexToken = currUrl.search("token");
@@ -86,22 +87,11 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope){
         var endIndex = currUrl.search("/loggedin");
 
         $rootScope.token = currUrl.substr(indexToken + 6);
-
-        $location.path('/loggedin');
-
-
-        var uNameUrl = $rootScope.baseUrl + "/UserName_Get?APIKey=" + $rootScope.apiKey + "&Token=" + $rootScope.token;
-
-        var uNameUrlJsonP = "https://crossorigin.me/" + uNameUrl;
-        console.log(uNameUrl);
-        console.log(uNameUrlJsonP);
-        $http.get(uNameUrlJsonP)
-            .then(function(response){
-                $rootScope.uName = response.data;
-            })
+        $localStorage.token = $rootScope.token;
 
 
 
+        window.location.href = $localStorage.appUrl + "loggedin";
     }
 
 
@@ -114,11 +104,12 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope){
 /* This is the controller for the unloggedin default page.
  */
 
-app.controller('firstPageCtrl', function($location, $scope, $rootScope){
+app.controller('firstPageCtrl', function($location, $scope, $rootScope, $localStorage){
 
-    $rootScope.baseUrl = $location.absUrl();
+    $localStorage.appUrl = $location.absUrl();
+
     // This is the URL for IVLE log in.
-    $scope.ivleLogInUrl = "https://ivle.nus.edu.sg/api/login/?apikey=" + $rootScope.apiKey + "&url=" + $rootScope.baseUrl;
+    $scope.ivleLogInUrl = "https://ivle.nus.edu.sg/api/login/?apikey=" + $rootScope.apiKey + "&url=" + $localStorage.appUrl;
 
 
 
@@ -126,8 +117,20 @@ app.controller('firstPageCtrl', function($location, $scope, $rootScope){
 });
 
 
-app.controller('loggedInCtrl', function($location, $scope, $rootScope){
+app.controller('loggedInCtrl', function($location, $scope, $rootScope, $localStorage, $http){
 
+
+    var uNameUrl = $rootScope.baseUrl + "/UserName_Get?APIKey=" + $rootScope.apiKey + "&token=" + $localStorage.token;
+    console.log(uNameUrl);
+
+    var uNameUrlJsonP = "https://crossorigin.me/" + uNameUrl;
+
+    $http.get(uNameUrlJsonP)
+        .then(function(response){
+            $localStorage.uName = response.data;
+            $rootScope.uName = $localStorage.uName;
+        });
+    
 
 });
 
