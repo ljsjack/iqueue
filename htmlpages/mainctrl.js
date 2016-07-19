@@ -1,12 +1,13 @@
 var app = angular.module("iqueue",['ui.router']);
 
-app.config(function($stateProvider, $urlRouterProvider){
+app.config(function($urlRouterProvider, $stateProvider, $httpProvider){
+
+
 
     $urlRouterProvider.otherwise('/');
 
+
     $stateProvider
-
-
 
         .state('home', {
             url: '/',
@@ -16,6 +17,11 @@ app.config(function($stateProvider, $urlRouterProvider){
         .state('aboutus', {
             url: '/aboutus',
             templateUrl: 'views/aboutus.html'
+        })
+
+        .state('aboutUsLogged', {
+            url: '/aboutuslogged',
+            templateUrl: 'views/aboutuslogged.html'
         })
 
         .state('deck', {
@@ -56,22 +62,46 @@ app.config(function($stateProvider, $urlRouterProvider){
         .state('account', {
             url: '/account',
             templateUrl : 'views/account.html'
-        })
+        });
+
+
 });
+
+
 
 
 /* Overall controller for the app
  */
 
-app.controller('overallCtrl', function($rootScope, $location, $state){
+app.controller('overallCtrl', function($rootScope, $location, $http, $scope){
 
+    $rootScope.apiKey = "BjCvF8PqrwKfRZkH6cjLf";
+    $rootScope.baseUrl = "https://ivle.nus.edu.sg/api/Lapi.svc";
 
     var currUrl = $location.absUrl();
     var indexToken = currUrl.search("token");
+
     // There is a token string in the URL. Will extract and do a verification with the server.
     if (indexToken > 0) {
-        var endIndex = currUrl.search("#");
-        $rootScope.token = currUrl.substring(indexToken + 6, endIndex);
+        var endIndex = currUrl.search("/loggedin");
+
+        $rootScope.token = currUrl.substr(indexToken + 6);
+
+        $location.path('/loggedin');
+
+
+        var uNameUrl = $rootScope.baseUrl + "/UserName_Get?APIKey=" + $rootScope.apiKey + "&Token=" + $rootScope.token;
+
+        var uNameUrlJsonP = uNameUrl + "?callback=JSON_CALLBACK";
+        console.log(uNameUrl);
+        $http.jsonp(uNameUrlJsonP)
+            .success(function (data, status, headers, config) {
+                $scope.details = data;
+            })
+            .error(function(data,status,headers,config){
+                $scope.statusval = status;
+                console.log($scope.statusval);
+            })
 
 
 
@@ -83,21 +113,26 @@ app.controller('overallCtrl', function($rootScope, $location, $state){
 
 });
 
+
 /* This is the controller for the unloggedin default page.
  */
 
 app.controller('firstPageCtrl', function($location, $scope, $rootScope){
 
-    $rootScope.baseUrl = $location.absUrl() + 'loggedin';
+    $rootScope.baseUrl = $location.absUrl();
     // This is the URL for IVLE log in.
-    var apiKey = "BjCvF8PqrwKfRZkH6cjLf";
-    $rootScope.apiKey = apiKey;
-    $scope.ivleLogInUrl = "https://ivle.nus.edu.sg/api/login/?apikey=" + apiKey + "&url=" + $rootScope.baseUrl;
+    $scope.ivleLogInUrl = "https://ivle.nus.edu.sg/api/login/?apikey=" + $rootScope.apiKey + "&url=" + $rootScope.baseUrl;
+
 
 
 
 });
 
+
+app.controller('loggedInCtrl', function($location, $scope, $rootScope){
+
+
+});
 
 
 

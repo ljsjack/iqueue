@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="loggedInCtrl">
     <div class="row">
         <!-- Navigation bar at the top of the page -->
         <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#FFFFFF;">
@@ -12,7 +12,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" ui-sref="home">iQueue</a>
+                    <a class="navbar-brand" ui-sref="loggedin">iQueue</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -45,7 +45,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a ui-sref="aboutus">About Us</a>
+                            <a ui-sref="aboutUsLogged">About Us</a>
                         </li>
                     </ul>
 
@@ -67,8 +67,8 @@
 
     <div class="row">
         <div class="text-center">
-            <h2>LOGGED IN. HELLO </h2><br>
-            <a ng-href="authUrl">Try me</a>
+            <h2>LOGGED IN. HELLO</h2><br>
+            {{details}}
         </div>
     </div>
 
