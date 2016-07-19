@@ -88,6 +88,7 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
 
         $rootScope.token = currUrl.substr(indexToken + 6);
         $localStorage.token = $rootScope.token;
+        $localStorage.loggedIn = true;
 
 
 
@@ -130,7 +131,7 @@ app.controller('loggedInCtrl', function($location, $scope, $rootScope, $localSto
             $localStorage.uName = response.data;
             $rootScope.uName = $localStorage.uName;
         });
-    
+
 
 });
 
