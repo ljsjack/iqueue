@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3d09f5a-0f97-4c0a-8d09-a3a68a647f60" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/mainctrl.js" afterPath="$PROJECT_DIR$/htmlpages/mainctrl.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/iQueueProj.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/iQueueProj_node_modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/css/custom.css" afterPath="$PROJECT_DIR$/htmlpages/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/firstpage.html" afterPath="$PROJECT_DIR$/htmlpages/views/firstpage.html" />
     </list>
     <ignored path="iQueueProj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,8 +55,8 @@
       <file leaf-file-name="mainctrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/htmlpages/mainctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -308,12 +315,12 @@
       <workItem from="1468660760393" duration="299000" />
       <workItem from="1468661063218" duration="12792000" />
       <workItem from="1468826787649" duration="2042000" />
-      <workItem from="1468829998175" duration="22847000" />
+      <workItem from="1468829998175" duration="22916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37983000" />
+    <option name="totallyTimeSpent" value="38052000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="707" extended-state="0" />
@@ -651,8 +658,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/htmlpages/mainctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding />
         </state>
       </provider>
