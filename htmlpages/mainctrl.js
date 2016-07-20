@@ -73,7 +73,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider){
 /* Overall controller for the app
  */
 
-app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $localStorage){
+app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $localStorage, $sessionStorage){
 
     $rootScope.apiKey = "BjCvF8PqrwKfRZkH6cjLf";
     $rootScope.baseUrl = "https://ivle.nus.edu.sg/api/Lapi.svc";
@@ -88,11 +88,13 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
 
         $rootScope.token = currUrl.substr(indexToken + 6);
         $localStorage.token = $rootScope.token;
+        // The person is stored as logged in.
         $localStorage.loggedIn = true;
 
+        if ($localStorage.loggedIn) {
+            window.location.href = $localStorage.appUrl + "loggedin";
+        }
 
-
-        window.location.href = $localStorage.appUrl + "loggedin";
     }
 
 
@@ -122,7 +124,7 @@ app.controller('loggedInCtrl', function($location, $scope, $rootScope, $localSto
 
 
     var uNameUrl = $rootScope.baseUrl + "/UserName_Get?APIKey=" + $rootScope.apiKey + "&token=" + $localStorage.token;
-    console.log(uNameUrl);
+    console.log($localStorage.token);
 
     var uNameUrlJsonP = "https://crossorigin.me/" + uNameUrl;
 
