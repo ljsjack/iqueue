@@ -110,7 +110,7 @@ app.run(function($rootScope, $localStorage, $state){
             e.preventDefault();
             $state.go("loggedin");
         }
-        else if (to.data.needLogin && !user.authenticated){
+        else if (to.data.needLogin && user == null){
             e.preventDefault();
             $state.go("home");
         }
