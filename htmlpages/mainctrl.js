@@ -10,114 +10,142 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
 
         .state('home', {
             url: '/',
-            templateUrl: 'views/firstpage.html'
+            templateUrl: 'views/firstpage.html',
+            data: {
+                needLogin : false
+            }
+
         })
 
         .state('aboutus', {
             url: '/aboutus',
-            templateUrl: 'views/aboutus.html'
+            templateUrl: 'views/aboutus.html',
+            data: {
+                needLogin : false
+            }
         })
 
         .state('aboutUsLogged', {
             url: '/aboutuslogged',
-            templateUrl: 'views/aboutuslogged.html'
+            templateUrl: 'views/aboutuslogged.html',
+            data: {
+                needLogin : true
+            }
         })
 
         .state('deck', {
             url: '/deck',
-            templateUrl: 'views/deck.html'
+            templateUrl: 'views/deck.html',
+            data: {
+                needLogin : true
+            }
         })
 
         .state('terrace', {
             url: '/terrace',
-            templateUrl: 'views/terrace.html'
+            templateUrl: 'views/terrace.html',
+            data: {
+                needLogin : true
+            }
         })
 
         .state('frontier', {
             url: '/frontier',
-            templateUrl: 'views/frontier.html'
+            templateUrl: 'views/frontier.html',
+            data: {
+                needLogin : true
+            }
         })
 
         .state('technoedge', {
             url: '/technoedge',
-            templateUrl: 'views/technoedge.html'
+            templateUrl: 'views/technoedge.html',
+            data: {
+                needLogin : true
+            }
         })
 
         .state('koufu', {
             url: '/koufu',
-            templateUrl: 'views/koufu.html'
+            templateUrl: 'views/koufu.html',
+            data: {
+                needLogin : true
+            }
         })
 
         .state('foodclique', {
             url: '/foodclique',
-            templateUrl: 'views/foodclique.html'
+            templateUrl: 'views/foodclique.html',
+            data: {
+                needLogin : true
+            }
         })
 
         .state('loggedin', {
             url: '/loggedin',
-            templateUrl : 'views/loggedin.html'
+            templateUrl : 'views/loggedin.html',
+            data: {
+                needLogin : true
+            }
         })
 
         .state('account', {
             url: '/account',
-            templateUrl : 'views/account.html'
+            templateUrl : 'views/account.html',
+            data: {
+                needLogin : true
+            }
         });
 
 
 });
 
 
-app.factory('currentUser', function(ivleInfo){
-    var _userName = null;
-    var _authenticated = null;
-    var _userToken = null;
+app.run(function($rootScope, $localStorage, $state){
+    $rootScope.$on('$stateChangeStart', function(e,to){
 
-    return {
-        // Setter function. Called when user is logging in.
-        logIn : function(token){
-            _authenticated = true;
-            _userToken = token;
-            ivleInfo.getUsername(_userToken).success(function(response) {
-                    _userName = response;
-                }
-                .error(function(){
-                    _userName = "Error";
-                })
-            )},
+        var user = $localStorage.user;
 
-        // Setter function. Called when user is logging out.
-        logOut : function(){
-            _authenticated = false;
-            _userToken = null;
-            _userName = null;
-        },
-
-        // Getter function. To retrieve authentication status.
-        getAuth : function(){
-            return _authenticated;
-        },
-
-        getUsername : function() {
-            return _userName;
+        if (!to.data.needLogin && user.authenticated){
+            e.preventDefault();
+            $state.go("loggedin");
+        }
+        else if (to.data.needLogin && !user.authenticated){
+            e.preventDefault();
+            $state.go("home");
         }
 
-    }
+
+
+    })
+
 });
 
 
 
-app.factory('ivleInfo', function($http){
+
+
+
+
+
+
+
+app.factory('ivleInfo', function($http, $q){
 
     var baseUrl = "https://ivle.nus.edu.sg/api/Lapi.svc";
     var apiKey = "BjCvF8PqrwKfRZkH6cjLf";
     var functions = {};
-    var uName;
+
     functions.getUsername = function(token) {
+        var defer = $q.defer();
         var uNameUrl = baseUrl + "/UserName_Get?APIKey=" + apiKey + "&token=" + token;
         var uNameUrlJsonP = "https://crossorigin.me/" + uNameUrl;
 
-        return $http.get(uNameUrlJsonP);
 
+        $http.get(uNameUrlJsonP).success(function(data){
+            defer.resolve(data);
+        });
+        return defer.promise;
 
     };
 
@@ -126,10 +154,15 @@ app.factory('ivleInfo', function($http){
 });
 
 
+
 /* Overall controller for the app
  */
 
-app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $localStorage){
+app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $localStorage, ivleInfo, $state){
+
+    if ($localStorage.user.authenticated != null){
+        $rootScope.user = $localStorage.user;
+    }
 
     $rootScope.apiKey = "BjCvF8PqrwKfRZkH6cjLf";
     $rootScope.baseUrl = "https://ivle.nus.edu.sg/api/Lapi.svc";
@@ -142,18 +175,41 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
     if (indexToken > 0) {
         var endIndex = currUrl.search("/loggedin");
 
-        $rootScope.token = currUrl.substr(indexToken + 6);
-        
-        $localStorage.token = $rootScope.token;
-        // The person is stored as logged in.
-        $localStorage.loggedIn = true;
+        var token = currUrl.substr(indexToken + 6);
 
-        if ($localStorage.loggedIn) {
+
+        $localStorage.user.authenticated = true;
+        $localStorage.user.userToken = token;
+        ivleInfo.getUsername(token).then(function(data){
+            $localStorage.user.userName = data;
+            $rootScope.user = $localStorage.user;
+        });
+
+
+
+        // Redirecting the user to the loggedin page.
+        if ($localStorage.user.authenticated) {
             $location.path('/loggedin');
             history.replaceState(null, null, $localStorage.appUrl + "loggedin");
         }
 
     }
+
+    $scope.logOut = function(){
+        $localStorage.user.authenticated = false;
+        $localStorage.user.userToken = null;
+        $localStorage.user.userName = null;
+        $state.go('home');
+
+    }
+
+
+});
+
+
+
+app.controller('loggedInCtrl', function($location, $scope, $rootScope, $localStorage, ivleInfo){
+
 
 });
 
@@ -170,20 +226,53 @@ app.controller('firstPageCtrl', function($location, $scope, $rootScope, $localSt
 
 
 
-
 });
 
 
-app.controller('loggedInCtrl', function($location, $scope, $rootScope, $localStorage, ivleInfo){
+/*
+ Service to store the information of a user. Currently under construction.
 
-    console.log($localStorage.token);
-    ivleInfo.getUsername($localStorage.token).success(function(response){
-        $scope.uName = response;
-    });
+ app.factory('CurrentUser', function(ivleInfo) {
+
+ function CurrentUser() {
+
+ }
+
+ CurrentUser.prototype = {
 
 
+ logIn: function (token) {
+ this.authenticated = true;
+ this.userToken = token;
 
-});
 
+ },
 
+ logOut: function () {
+ this.authenticated = false;
+ this.userToken = null;
+ this.userName = null;
+ },
 
+ getAuth: function() {
+ return this.authenticated;
+ },
+
+ getUsername: function() {
+ return this.userName;
+ },
+
+ getUsertoken: function(){
+ return this.userToken;
+ },
+
+ setUserName: function(name){
+ this.userName = name;
+ }
+
+ };
+
+ return CurrentUser;
+ });
+
+ */
