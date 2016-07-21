@@ -8,7 +8,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
 
     $stateProvider
 
-        .state('home', {
+        .state('default', {
             url: '/',
             templateUrl: 'views/firstpage.html',
             data: {
@@ -26,7 +26,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
         })
 
         .state('aboutUsLogged', {
-            url: '/aboutuslogged',
+            url: '/home/aboutus',
             templateUrl: 'views/aboutuslogged.html',
             data: {
                 needLogin : true
@@ -34,7 +34,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
         })
 
         .state('deck', {
-            url: '/deck',
+            url: '/home/deck',
             templateUrl: 'views/deck.html',
             data: {
                 needLogin : true
@@ -42,7 +42,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
         })
 
         .state('terrace', {
-            url: '/terrace',
+            url: '/home/terrace',
             templateUrl: 'views/terrace.html',
             data: {
                 needLogin : true
@@ -50,7 +50,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
         })
 
         .state('frontier', {
-            url: '/frontier',
+            url: '/home/frontier',
             templateUrl: 'views/frontier.html',
             data: {
                 needLogin : true
@@ -58,7 +58,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
         })
 
         .state('technoedge', {
-            url: '/technoedge',
+            url: '/home/technoedge',
             templateUrl: 'views/technoedge.html',
             data: {
                 needLogin : true
@@ -66,7 +66,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
         })
 
         .state('koufu', {
-            url: '/koufu',
+            url: '/home/koufu',
             templateUrl: 'views/koufu.html',
             data: {
                 needLogin : true
@@ -74,15 +74,15 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
         })
 
         .state('foodclique', {
-            url: '/foodclique',
+            url: '/home/foodclique',
             templateUrl: 'views/foodclique.html',
             data: {
                 needLogin : true
             }
         })
 
-        .state('loggedin', {
-            url: '/loggedin',
+        .state('home', {
+            url: '/home',
             templateUrl : 'views/loggedin.html',
             data: {
                 needLogin : true
@@ -90,7 +90,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
         })
 
         .state('account', {
-            url: '/account',
+            url: '/home/account',
             templateUrl : 'views/account.html',
             data: {
                 needLogin : true
@@ -108,11 +108,11 @@ app.run(function($rootScope, $localStorage, $state){
 
         if (!to.data.needLogin && user.authenticated){
             e.preventDefault();
-            $state.go("loggedin");
+            $state.go("home");
         }
         else if (to.data.needLogin && user == null){
             e.preventDefault();
-            $state.go("home");
+            $state.go("default");
         }
 
 
@@ -198,7 +198,7 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
 
     $scope.logOut = function(){
         $localStorage.user = null;
-        $state.go('home');
+        $state.go('default');
 
     }
 
