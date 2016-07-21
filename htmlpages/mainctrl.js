@@ -4,9 +4,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
 
     $locationProvider.html5Mode(true);
 
-
     $urlRouterProvider.otherwise('/');
-
 
     $stateProvider
 
@@ -69,42 +67,44 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
 });
 
 
+app.factory('currentUser', function(ivleInfo){
+    var _userName = null;
+    var _authenticated = null;
+    var _userToken = null;
 
+    return {
+        // Setter function. Called when user is logging in.
+        logIn : function(token){
+            _authenticated = true;
+            _userToken = token;
+            ivleInfo.getUsername(_userToken).success(function(response) {
+                    _userName = response;
+                }
+                .error(function(){
+                    _userName = "Error";
+                })
+            )},
 
-/* Overall controller for the app
- */
+        // Setter function. Called when user is logging out.
+        logOut : function(){
+            _authenticated = false;
+            _userToken = null;
+            _userName = null;
+        },
 
-app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $localStorage, $sessionStorage, ivleInfo){
+        // Getter function. To retrieve authentication status.
+        getAuth : function(){
+            return _authenticated;
+        },
 
-    $rootScope.apiKey = "BjCvF8PqrwKfRZkH6cjLf";
-    $rootScope.baseUrl = "https://ivle.nus.edu.sg/api/Lapi.svc";
-
-
-    var currUrl = $location.absUrl();
-    var indexToken = currUrl.search("token");
-
-    // There is a token string in the URL. Will extract and do a verification with the server.
-    if (indexToken > 0) {
-        var endIndex = currUrl.search("/loggedin");
-
-        $rootScope.token = currUrl.substr(indexToken + 6);
-        $localStorage.token = $rootScope.token;
-        // The person is stored as logged in.
-        $localStorage.loggedIn = true;
-
-        if ($localStorage.loggedIn) {
-            $location.path('/loggedin');
-            history.replaceState(null, null, $localStorage.appUrl + "loggedin");
-
+        getUsername : function() {
+            return _userName;
         }
 
     }
-
-
-
-
-
 });
+
+
 
 app.factory('ivleInfo', function($http){
 
@@ -125,6 +125,37 @@ app.factory('ivleInfo', function($http){
 
 });
 
+
+/* Overall controller for the app
+ */
+
+app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $localStorage){
+
+    $rootScope.apiKey = "BjCvF8PqrwKfRZkH6cjLf";
+    $rootScope.baseUrl = "https://ivle.nus.edu.sg/api/Lapi.svc";
+
+
+    var currUrl = $location.absUrl();
+    var indexToken = currUrl.search("token");
+
+    // There is a token string in the URL. Will extract and do a verification with the server.
+    if (indexToken > 0) {
+        var endIndex = currUrl.search("/loggedin");
+
+        $rootScope.token = currUrl.substr(indexToken + 6);
+        
+        $localStorage.token = $rootScope.token;
+        // The person is stored as logged in.
+        $localStorage.loggedIn = true;
+
+        if ($localStorage.loggedIn) {
+            $location.path('/loggedin');
+            history.replaceState(null, null, $localStorage.appUrl + "loggedin");
+        }
+
+    }
+
+});
 
 
 /* This is the controller for the unloggedin default page.
@@ -148,7 +179,9 @@ app.controller('loggedInCtrl', function($location, $scope, $rootScope, $localSto
     console.log($localStorage.token);
     ivleInfo.getUsername($localStorage.token).success(function(response){
         $scope.uName = response;
-    })
+    });
+
+
 
 });
 
