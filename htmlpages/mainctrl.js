@@ -177,6 +177,7 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
 
         var token = currUrl.substr(indexToken + 6);
 
+        $localStorage.user = {};
 
         $localStorage.user.authenticated = true;
         $localStorage.user.userToken = token;
