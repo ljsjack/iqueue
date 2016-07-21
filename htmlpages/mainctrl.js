@@ -160,7 +160,7 @@ app.factory('ivleInfo', function($http, $q){
 
 app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $localStorage, ivleInfo, $state){
 
-    if ($localStorage.user.authenticated != null){
+    if ($localStorage.user != null){
         $rootScope.user = $localStorage.user;
     }
 
@@ -196,9 +196,7 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
     }
 
     $scope.logOut = function(){
-        $localStorage.user.authenticated = false;
-        $localStorage.user.userToken = null;
-        $localStorage.user.userName = null;
+        $localStorage.user = null;
         $state.go('home');
 
     }
