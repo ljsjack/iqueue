@@ -23,4 +23,11 @@
 	font-size: 50px;
 }
 
+.italic {
+	font-style: italic;
+	font-size: 20px;
+}
 
+.img-circle:hover {
+	opacity: 0.5;
+}
