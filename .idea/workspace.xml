@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3d09f5a-0f97-4c0a-8d09-a3a68a647f60" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/css/bootstrap.css" afterPath="$PROJECT_DIR$/htmlpages/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/css/custom.css" afterPath="$PROJECT_DIR$/htmlpages/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/index.html" afterPath="$PROJECT_DIR$/htmlpages/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/js/bootstrap.js" afterPath="$PROJECT_DIR$/htmlpages/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/aboutus.html" afterPath="$PROJECT_DIR$/htmlpages/views/aboutus.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/aboutuslogged.html" afterPath="$PROJECT_DIR$/htmlpages/views/aboutuslogged.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/account.html" afterPath="$PROJECT_DIR$/htmlpages/views/account.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/deck.html" afterPath="$PROJECT_DIR$/htmlpages/views/deck.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/firstpage.html" afterPath="$PROJECT_DIR$/htmlpages/views/firstpage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/foodclique.html" afterPath="$PROJECT_DIR$/htmlpages/views/foodclique.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/frontier.html" afterPath="$PROJECT_DIR$/htmlpages/views/frontier.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/koufu.html" afterPath="$PROJECT_DIR$/htmlpages/views/koufu.html" />
@@ -33,22 +40,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mainctrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/htmlpages/mainctrl.js">
+      <file leaf-file-name="loggedin.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htmlpages/views/loggedin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2820">
-              <caret line="188" column="0" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="firstpage.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="firstpage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmlpages/views/firstpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-435">
-              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+            <state relative-caret-position="355">
+              <caret line="38" column="58" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/htmlpages/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="6259" column="27" selection-start-line="6259" selection-start-column="27" selection-end-line="6259" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htmlpages/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htmlpages/js/bootstrap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="328" column="38" selection-start-line="328" selection-start-column="33" selection-end-line="328" selection-end-column="38" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,16 +118,12 @@
         <option value="$PROJECT_DIR$/htmlpages/terrace.html" />
         <option value="$PROJECT_DIR$/htmlpages/aboutus.html" />
         <option value="$PROJECT_DIR$/htmlpages/firstpage.html" />
-        <option value="$PROJECT_DIR$/htmlpages/views/firstpage.html" />
         <option value="$PROJECT_DIR$/htmlpages/views/loading.html" />
         <option value="$PROJECT_DIR$/htmlpages/js/controller.js" />
         <option value="$PROJECT_DIR$/htmlpages/controllers/firstPageCtrl.js" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/htmlpages/views/aboutus.html" />
-        <option value="$PROJECT_DIR$/htmlpages/index.html" />
         <option value="$PROJECT_DIR$/htmlpages/mainctrl.js" />
-        <option value="$PROJECT_DIR$/htmlpages/views/account.html" />
-        <option value="$PROJECT_DIR$/htmlpages/views/loggedin.html" />
+        <option value="$PROJECT_DIR$/htmlpages/index.html" />
         <option value="$PROJECT_DIR$/htmlpages/views/aboutuslogged.html" />
         <option value="$PROJECT_DIR$/htmlpages/views/deck.html" />
         <option value="$PROJECT_DIR$/htmlpages/views/foodclique.html" />
@@ -96,6 +131,13 @@
         <option value="$PROJECT_DIR$/htmlpages/views/koufu.html" />
         <option value="$PROJECT_DIR$/htmlpages/views/technoedge.html" />
         <option value="$PROJECT_DIR$/htmlpages/views/terrace.html" />
+        <option value="$PROJECT_DIR$/htmlpages/css/custom.css" />
+        <option value="$PROJECT_DIR$/htmlpages/views/aboutus.html" />
+        <option value="$PROJECT_DIR$/htmlpages/views/loggedin.html" />
+        <option value="$PROJECT_DIR$/htmlpages/views/account.html" />
+        <option value="$PROJECT_DIR$/htmlpages/views/firstpage.html" />
+        <option value="$PROJECT_DIR$/htmlpages/js/bootstrap.js" />
+        <option value="$PROJECT_DIR$/htmlpages/css/bootstrap.css" />
       </list>
     </option>
   </component>
@@ -201,7 +243,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -216,7 +258,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/ivleapi-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iQueueProj 2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.localhost:3000">
@@ -318,18 +360,18 @@
       <workItem from="1468661063218" duration="12792000" />
       <workItem from="1468826787649" duration="2042000" />
       <workItem from="1468829998175" duration="36583000" />
-      <workItem from="1469025987737" duration="23013000" />
+      <workItem from="1469025987737" duration="28292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74732000" />
+    <option name="totallyTimeSpent" value="80011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2065131" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2065131" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -452,106 +494,10 @@
     <entry file="file://$PROJECT_DIR$/htmlpages/views/loading.html" />
     <entry file="file://$PROJECT_DIR$/htmlpages/js/controller.js" />
     <entry file="file://$PROJECT_DIR$/htmlpages/controllers/firstPageCtrl.js" />
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/aboutus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/account.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/deck.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="54" column="90" selection-start-line="54" selection-start-column="90" selection-end-line="54" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/foodclique.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="54" column="90" selection-start-line="54" selection-start-column="90" selection-end-line="54" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/frontier.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="54" column="90" selection-start-line="54" selection-start-column="90" selection-end-line="54" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/koufu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="54" column="90" selection-start-line="54" selection-start-column="90" selection-end-line="54" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/terrace.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="54" column="90" selection-start-line="54" selection-start-column="90" selection-end-line="54" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/aboutuslogged.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="53" column="90" selection-start-line="53" selection-start-column="90" selection-end-line="53" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/technoedge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="54" column="90" selection-start-line="54" selection-start-column="90" selection-end-line="54" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/loggedin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="53" column="90" selection-start-line="53" selection-start-column="90" selection-end-line="53" selection-end-column="90" />
           <folding />
         </state>
       </provider>
@@ -564,10 +510,132 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/aboutuslogged.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="59" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/deck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="59" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/foodclique.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="59" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/frontier.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="59" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/koufu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="59" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/technoedge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="59" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/terrace.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="59" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/loggedin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/htmlpages/views/firstpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-435">
-          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+        <state relative-caret-position="355">
+          <caret line="38" column="58" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/aboutus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="56" column="82" selection-start-line="56" selection-start-column="82" selection-end-line="56" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="328" column="38" selection-start-line="328" selection-start-column="33" selection-end-line="328" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="6259" column="27" selection-start-line="6259" selection-start-column="27" selection-end-line="6259" selection-end-column="27" />
           <folding />
         </state>
       </provider>

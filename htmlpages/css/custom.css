@@ -12,3 +12,15 @@
 .carousel-control {
 	width: 15%;
 }
+
+
+.row-centered {
+	text-align:center;
+}
+
+.app-title {
+	font-family: 'Slabo 27px', serif;
+	font-size: 50px;
+}
+
+

@@ -10,7 +10,7 @@
 <div class="container" ng-controller="firstPageCtrl">
     <div class="row">
         <!-- Navigation bar at the top of the page -->
-        <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#FFFFFF;">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped together for better mobile display-->
                 <div class="navbar-header">
@@ -24,9 +24,9 @@
                     <a class="navbar-brand" ui-sref="home">iQueue</a>
                 </div>
 
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
 
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav" >
 
                         <li>
                             <a ui-sref="aboutus">About Us</a>
@@ -36,7 +36,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Log in button -->
                         <li>
-                            <a ng-href="{{ivleLogInUrl}}"><span class="glyphicon glyphicon-log-in"></span>
+                            <a ng-href="{{ivleLogInUrl}}" ><span class="glyphicon glyphicon-log-in"></span>
                                 Log In with IVLE</a>
 
                         </li>
@@ -51,79 +51,89 @@
         </nav>
     </div>
 
-    <br>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>
-            <li data-target="#myCarousel" data-slide-to="5"></li>
-        </ol>
+    <br><br>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
+    <div class="row row-centered">
 
-            <div class="item active">
-                <img src="images/deck1.jpg" alt="Chania" width="460" height="345">
-                <div class="carousel-caption">
-                    <h3>The Deck</h3>
-                    <p>Located at Arts</p>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+                <div class="item active">
+                    <img src="images/deck1.jpg" alt="Chania" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h3>The Deck</h3>
+                        <p>Located at Arts</p>
+                    </div>
                 </div>
+
+                <div class="item">
+                    <img src="images/foodclique1.jpg" alt="Chania" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h3>Food Clique</h3>
+                        <p>Located at utown SRC</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/frontier1.jpg" alt="Flower" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h3>Frontier</h3>
+                        <p>Located at science</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/koufu1.jpg" alt="Flower" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h3>Koufu</h3>
+                        <p>Located at utown </p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/technoedge1.jpg" alt="Flower" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h3>Technoedge</h3>
+                        <p>Located at engineering</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/terrace1.jpg" alt="Flower" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h3>The terrace</h3>
+                        <p>Located at biz</p>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="item">
-                <img src="images/foodclique1.jpg" alt="Chania" width="460" height="345">
-                <div class="carousel-caption">
-                    <h3>Food Clique</h3>
-                    <p>Located at utown SRC</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="images/frontier1.jpg" alt="Flower" width="460" height="345">
-                <div class="carousel-caption">
-                    <h3>Frontier</h3>
-                    <p>Located at science</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="images/koufu1.jpg" alt="Flower" width="460" height="345">
-                <div class="carousel-caption">
-                    <h3>Koufu</h3>
-                    <p>Located at utown </p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="images/technoedge1.jpg" alt="Flower" width="460" height="345">
-                <div class="carousel-caption">
-                    <h3>Technoedge</h3>
-                    <p>Located at engineering</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="images/terrace1.jpg" alt="Flower" width="460" height="345">
-                <div class="carousel-caption">
-                    <h3>The terrace</h3>
-                    <p>Located at biz</p>
-                </div>
-            </div>
-
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
 
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        <h1 class="app-title" >iQueue</h1>
+
     </div>
+
+
+
 </div>
