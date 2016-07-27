@@ -123,13 +123,6 @@ app.run(function($rootScope, $localStorage, $state){
 
 
 
-
-
-
-
-
-
-
 app.factory('ivleInfo', function($http, $q){
 
     var baseUrl = "https://ivle.nus.edu.sg/api/Lapi.svc";
@@ -187,7 +180,6 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
         });
 
 
-
         // Redirecting the user to the loggedin page.
         if ($localStorage.user.authenticated) {
             $location.path('/loggedin');
@@ -200,11 +192,12 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
         $localStorage.user = null;
         $state.go('default');
 
-    }
+    };
+
+
 
 
 });
-
 
 
 app.controller('loggedInCtrl', function($location, $scope, $rootScope, $localStorage, ivleInfo){

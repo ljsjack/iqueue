@@ -7,7 +7,12 @@
     "bower": "^1.7.9",
     "express": "^4.14.0",
     "express-jwt": "^3.4.0",
-    "http-proxy": "^1.14.0"
+    "http-proxy": "^1.14.0",
+    "kerberos": "^0.0.17",
+    "method-override": "^2.3.6",
+    "mongodb": "^2.0.33",
+    "mongoose": "^3.8.40",
+    "node-restful": "^0.2.5"
   },
   "devDependencies": {},
   "scripts": {
