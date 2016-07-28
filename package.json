@@ -11,8 +11,10 @@
     "kerberos": "^0.0.17",
     "method-override": "^2.3.6",
     "mongodb": "^2.0.33",
-    "mongoose": "^3.8.40",
-    "node-restful": "^0.2.5"
+    "mongoose": "^4.5.7",
+    "morgan": "^1.7.0",
+    "node-restful": "^0.2.5",
+    "nodemon": "^1.10.0"
   },
   "devDependencies": {},
   "scripts": {
