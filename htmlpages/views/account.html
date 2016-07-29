@@ -59,6 +59,9 @@
                                     <a ui-sref="account">Account</a>
                                 </li>
                                 <li>
+                                    <a ng-show="user.isStoreOwner" ui-sref="store">My Store</a>
+                                </li>
+                                <li>
                                     <a ui-sref="default" data-ng-click="logOut()">Log Out</a>
                                 </li>
 
@@ -92,6 +95,13 @@
             <div>You have <span id="count-cart">X</span> items in your cart</div>
             <div>Total Cart:$<span id="total-cart"></span></div>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center">
+            <button ng-click="checkOut()">Check Out</button>
+        </div>
+
     </div>
 
     <script src="js/shoppingCart.js"></script>

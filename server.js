@@ -20,6 +20,10 @@ app.use(express.static(__dirname + "/htmlpages"));
 app.listen(process.env.PORT || 3000);
 console.log("Server up on port 3000");
 
+// BodyParser
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 // Routes
 app.use('/api', require('./routes/api'));
 
@@ -27,14 +31,6 @@ app.use('/api', require('./routes/api'));
 app.use(function(req, res) {
     res.sendFile(__dirname + '/htmlpages/index.html');
 });
-
-
-// BodyParser
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-
-
 
 
 module.exports = app;

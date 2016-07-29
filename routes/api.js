@@ -30,7 +30,7 @@ router.get('/:id', function(req, res, next) {
     });
 });
 
-/* PUT. Update.
+// PUT. Update.
 router.put('/:id', function(req, res, next) {
     order.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
         if (err) return next(err);

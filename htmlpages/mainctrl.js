@@ -1,4 +1,4 @@
-var app = angular.module("iqueue",['ui.router', 'ngStorage']);
+var app = angular.module("iqueue",['ui.router', 'ngStorage', 'ngResource']);
 
 app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $locationProvider){
 
@@ -175,6 +175,10 @@ app.factory('ivleInfo', function($http, $q){
 });
 
 
+app.factory('Server', function($resource){
+    return $resource('/api/:id');
+});
+
 
 /* Overall controller for the app
  */
@@ -254,17 +258,33 @@ app.controller('firstPageCtrl', function($location, $scope, $rootScope, $localSt
 
 });
 
-app.controller('accountCtrl', function($localStorage){
+app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
 
-var userName = $localStorage.user.userName;
-var yourOrder = shoppingCart.listCart();
+    var userName = $localStorage.user.userName;
+    var yourOrder = shoppingCart.listCart();
     var totalCost = shoppingCart.totalCart();
     console.log("your name is "+userName);
     console.log("the total cost is "+totalCost);
     console.log("you ordered "+yourOrder[0].name);
-var orderUp = {a:"", b:yourOrder, c:totalCost};
+    var orderUp = {name:"", orders:yourOrder};
     orderUp.a = userName;
     console.log(orderUp);
+
+
+    /*
+     Checkout function sends the order data into the database.
+     The localStorage of order data is also destroyed.
+     */
+    $scope.checkOut = function(){
+
+
+        console.log(orderUp);
+        $scope.newOrder = new Server(orderUp);
+        $scope.newOrder.$save();
+       //$state.go('home');
+
+
+    }
 
 });
 
