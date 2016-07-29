@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <div class="container" ng-controller="accountCtrl">
+=======
+
+<div class="container">
+>>>>>>> 2c537bddbeab382ad028c3d89e621e976da76118
     <div class="row">
         <!-- Navigation bar at the top of the page -->
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -81,6 +86,8 @@
         </div>
     </div>
 
+
+    <!-- order list -->
     <div class="row">
         <div class="text-center">
             <ul id="show-cart">
@@ -126,30 +133,38 @@
             shoppingCart.clearCart();
             displayCart();
         });
-        function displayCart() {
-            var cartArray = shoppingCart.listCart();
-            console.log(cartArray);
-            var output = "";
-            for (var i in cartArray) {
-                output += "<ul>"
-                        +cartArray[i].name
-                        +" <input class='item-count' type='number.toFixed(0)' data-name='"
-                        +cartArray[i].name
-                        +"' value='"+cartArray[i].count+"' >"
-                        +" x "+cartArray[i].price
-                        +" = "+cartArray[i].total
-                        +" <button class='plus-item' data-name='"
-                        +cartArray[i].name+"'>+</button>"
-                        +" <button class='subtract-item' data-name='"
-                        +cartArray[i].name+"'>-</button>"
-                        +" <button class='delete-item' data-name='"
-                        +cartArray[i].name+"'>X</button>"
-                        +"</ul>";
-            }
-            $("#show-cart").html(output);
-            $("#count-cart").html( shoppingCart.countCart() );
-            $("#total-cart").html( shoppingCart.totalCart() );
-        }
+         function displayCart() {
+         var cartArray = shoppingCart.listCart();
+         console.log(cartArray);
+         var output = "";
+             output += '<table class="table table-bordered">' + "<thead>"
+                    +"<tr>" + "<th>" + "Dish" + "</th>"
+                    +"<th>" + "Price" + "</th>"
+                    +"<th>" + "Total quantity" + "</th>"
+                    +"<th>" + "Total price" + "</th>"
+                    +"</tr>" + "</thead>" + "<tbody>";
+         for (var i in cartArray) {
+             output += "<tr>"
+             +"<td>" + cartArray[i].name + "</td>"
+             +"<td>"+ cartArray[i].price + "</td>"
+             +"<td>" + "<input class='item-count' type='number.toFixed(0)' data-name='"
+             +cartArray[i].name +"' value='" + cartArray[i].count+"' >"
+                     +" <button class='plus-item' data-name='"
+                     +cartArray[i].name+"'>+</button>"
+                     +" <button class='subtract-item' data-name='"
+                     +cartArray[i].name+"'>-</button>"
+                     +" <button class='delete-item' data-name='"
+                     +cartArray[i].name+"'>X</button>"
+                     + "</td>"
+             +"<td>"+cartArray[i].total + "</td>"
+             +"</tr>";
+         }
+         output += "</table>"
+         $("#show-cart").html(output);
+         $("#count-cart").html( shoppingCart.countCart() );
+         $("#total-cart").html( shoppingCart.totalCart() );
+         }
+
         $("#show-cart").on("click", ".delete-item", function(event){
             var name = $(this).attr("data-name");
             shoppingCart.removeItemFromCartAll(name);
@@ -173,10 +188,6 @@
         });
         displayCart();
     </script>
-
-
-
-
 
 
 </div>

@@ -1,3 +1,5 @@
+
+
 <div class="container">
 
     <div class="row">
@@ -114,14 +116,14 @@
                                 <li><a class="put-in-cart" href="#" data-name="Char Siew rice" data-price="2.40">Char Siew rice</a></li>
                             </ul>
                             <button class="add-to-cart" type="button">Add to Cart!</button>
-                            <button id="clear-cart">Clear Cart</button>
+                            <button class="clear-cart">Clear Cart</button>
                         </span>
                     </div>
                 </div>
 
                 <div id="stall2" class="tab-pane fade">
                     <h3>Western Stall</h3>
-                    <img src="images/western.jpg" alt="Stall 1" style="width:400px;height:300px;">
+                    <img src="images/western.jpg" alt="Stall 2" style="width:400px;height:300px;">
                     <div class="right">
                         Select your dish!<br>
                         <span class="dropdown">
@@ -134,13 +136,13 @@
                                 <li><a class="put-in-cart" href="#" data-name="Pasta" data-price="2.50">Pasta</a></li>
                             </ul>
                             <button class="add-to-cart" type="button">Add to Cart!</button>
-                            <button id="clear-cart">Clear Cart</button>
+                            <button class="clear-cart">Clear Cart</button>
                         </span>
                     </div>
                 </div>
                 <div id="stall3" class="tab-pane fade">
                     <h3>Stall 3</h3>
-                    <img src="images/chickenrice.jpg" alt="Stall 1" style="width:400px;height:300px;">
+                    <img src="" alt="Stall 3" style="width:400px;height:300px;">
                     <div class="right">
                         Select your dish!<br>
                         <span class="dropdown">
@@ -148,19 +150,19 @@
                                 Select Your Meal!<span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="#">chicken rice</a></li>
-                                <li><a href="#">duck rice</a></li>
-                                <li><a href="#">char siew rice</a></li>
+                               <li><a class="put-in-cart" href="#" data-name="Sliced Fish Bee Hoon" data-price="2.40">Sliced Fish Bee Hoon</a></li>
+                                <li><a class="put-in-cart" href="#" data-name="Fried Fish Bee Hoon" data-price="2.50">Fried Fish Bee Hoon</a></li>
+                                <li><a class="put-in-cart" href="#" data-name="Fried Kway Teow" data-price="3.00">Fried Kway Teow</a></li>
                             </ul>
                             <button class="add-to-cart" type="button">Add to Cart!</button>
-                            <button id="clear-cart">Clear Cart</button>
+                            <button class="clear-cart">Clear Cart</button>
                         </span>
                     </div>
                 </div>
 
                 <div id="stall4" class="tab-pane fade">
                     <h3>Stall 4</h3>
-                    <img src="images/western.jpg" alt="Stall 1" style="width:400px;height:300px;">
+                    <img src="" alt="Stall 4" style="width:400px;height:300px;">
                     <div class="right">
                         Select your dish!<br>
                         <span class="dropdown">
@@ -168,12 +170,12 @@
                                 Select Your Meal!<span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="#">chicken chop</a></li>
-                                <li><a href="#">fish & chips</a></li>
-                                <li><a href="#">spaghetti</a></li>
+                                <li><a class="put-in-cart" href="#" data-name="Chicken Teriyaki Bento" data-price="3.50">Chicken Teriyaki Bento</a></li>
+                                <li><a class="put-in-cart" href="#" data-name="Ebi Bento" data-price="4.00">Ebi Bento</a></li>
+                                <li><a class="put-in-cart" href="#" data-name="Ramen Set" data-price="3.50">Ramen Set</a></li>
                             </ul>
                             <button class="add-to-cart" type="button">Add to Cart!</button>
-                            <button id="clear-cart">Clear Cart</button>
+                            <button class="clear-cart">Clear Cart</button>
                         </span>
                     </div>
                 </div>
@@ -181,110 +183,99 @@
         </div>
     </div>
 </div>
-
-<div>
-
-</div>
-
-
-<!--<div>
-    <ul id="show-cart">
-        <li>???????</li>
-    </ul>
-    <div>You have <span id="count-cart">X</span> items in your cart</div>
-    <div>Total Cart:$<span id="total-cart"></span></div>
-</div>-->
-
-
-
 <script src="js/shoppingCart.js"></script>
-
 <script>
     var name ;
     var price;
 
     $(function(){
 
-        $(".dropdown-menu").on('click', 'li a', function(){
-            $(".btn:first-child").text($(this).text());
-            $(".btn:first-child").val($(this).text());
-        });
+    $(".dropdown-menu").on('click', 'li a', function(){
+    $(".btn:first-child").text($(this).text());
+    $(".btn:first-child").val($(this).text());
+    });
 
     });
     $(".put-in-cart").click(function(event){
-        event.preventDefault();
-        //var name = $(this).attr("data-name");
-        //var price = Number($(this).attr("data-price"));
-        name = $(this).attr("data-name");
-        price = Number($(this).attr("data-price"));
-        console.log(name);
+    event.preventDefault();
+    //var name = $(this).attr("data-name");
+    //var price = Number($(this).attr("data-price"));
+    name = $(this).attr("data-name");
+    price = Number($(this).attr("data-price"));
+    console.log(name);
 
     });
     $(".add-to-cart").click(function(event){
-        event.preventDefault();
-        /*var name = $(".put-in-cart").attr("data-name");
-        console.log(name);
-        var price = Number($(".put-in-cart").attr("data-price"));*/
-        shoppingCart.addItemToCart(name, price, 1);
-        if (price === undefined){
-            alert("Please choose an item from the dropdown button!")
-        }
-        else {
-            alert("Item added to cart!");
-        }
-        displayCart();
+    event.preventDefault();
+    /*var name = $(".put-in-cart").attr("data-name");
+    console.log(name);
+    var price = Number($(".put-in-cart").attr("data-price"));*/
+    shoppingCart.addItemToCart(name, price, 1);
+    if (price === undefined){
+    alert("Please choose an item from the dropdown button!")
+    }
+    else {
+    alert("Item added to cart!");
+    }
+    displayCart();
     });
-    $("#clear-cart").click(function(event){
-        shoppingCart.clearCart();
-        alert("Cart cleared!");
-        name = null;
-        displayCart();
+    $(".clear-cart").click(function(event){
+    shoppingCart.clearCart();
+    alert("Cart cleared!");
+    name = null;
+    displayCart();
     });
     function displayCart() {
-        var cartArray = shoppingCart.listCart();
-        console.log(cartArray);
-        var output = "";
-        for (var i in cartArray) {
-            output += "<li>"
-                    +cartArray[i].name
-                    +" <input class='item-count' type='number.toFixed(0)' data-name='"
-                    +cartArray[i].name
-                    +"' value='"+cartArray[i].count+"' >"
-                    +" x "+cartArray[i].price
-                    +" = "+cartArray[i].total
-                    +" <button class='plus-item' data-name='"
-                    +cartArray[i].name+"'>+</button>"
-                    +" <button class='subtract-item' data-name='"
-                    +cartArray[i].name+"'>-</button>"
-                    +" <button class='delete-item' data-name='"
-                    +cartArray[i].name+"'>X</button>"
-                    +"</li>";
-        }
-        $("#show-cart").html(output);
-        $("#count-cart").html( shoppingCart.countCart() );
-        $("#total-cart").html( shoppingCart.totalCart() );
+    var cartArray = shoppingCart.listCart();
+    console.log(cartArray);
+    var output = "";
+    for (var i in cartArray) {
+    output += "<li>"
+        +cartArray[i].name
+        +" <input class='item-count' type='number.toFixed(0)' data-name='"
+                +cartArray[i].name
+                +"' value='"+cartArray[i].count+"' >"
+        +" x "+cartArray[i].price
+        +" = "+cartArray[i].total
+        +" <button class='plus-item' data-name='"
+                +cartArray[i].name+"'>+</button>"
+        +" <button class='subtract-item' data-name='"
+                +cartArray[i].name+"'>-</button>"
+        +" <button class='delete-item' data-name='"
+                +cartArray[i].name+"'>X</button>"
+        +"</li>";
+    }
+    $("#show-cart").html(output);
+    $("#count-cart").html( shoppingCart.countCart() );
+    $("#total-cart").html( shoppingCart.totalCart() );
     }
     $("#show-cart").on("click", ".delete-item", function(event){
-        var name = $(this).attr("data-name");
-        shoppingCart.removeItemFromCartAll(name);
-        displayCart();
+    var name = $(this).attr("data-name");
+    shoppingCart.removeItemFromCartAll(name);
+    displayCart();
     });
     $("#show-cart").on("click", ".subtract-item", function(event){
-        var name = $(this).attr("data-name");
-        shoppingCart.removeItemFromCart(name);
-        displayCart();
+    var name = $(this).attr("data-name");
+    shoppingCart.removeItemFromCart(name);
+    displayCart();
     });
     $("#show-cart").on("click", ".plus-item", function(event){
-        var name = $(this).attr("data-name");
-        shoppingCart.addItemToCart(name, 0, 1);
-        displayCart();
+    var name = $(this).attr("data-name");
+    shoppingCart.addItemToCart(name, 0, 1);
+    displayCart();
     });
     $("#show-cart").on("change", ".item-count", function(event){
-        var name = $(this).attr("data-name");
-        var count = Number($(this).val());
-        shoppingCart.setCountForItem(name, count);
-        displayCart();
-    });
+    var name = $(this).attr("data-name");
+    var count = Number($(this).val());
+    shoppingCart.setCountForItem(name, count);
     displayCart();
+    });
+    displayCart()
 </script>
+
+<div>
+
+</div>
+
+
 
