@@ -12,6 +12,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
             url: '/',
             templateUrl: 'views/firstpage.html',
             data: {
+                needStore: false,
                 needLogin : false
             }
 
@@ -21,6 +22,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
             url: '/aboutus',
             templateUrl: 'views/aboutus.html',
             data: {
+                needStore: false,
                 needLogin : false
             }
         })
@@ -29,6 +31,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
             url: '/home/aboutus',
             templateUrl: 'views/aboutuslogged.html',
             data: {
+                needStore: false,
                 needLogin : true
             }
         })
@@ -37,6 +40,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
             url: '/home/deck',
             templateUrl: 'views/deck.html',
             data: {
+                needStore: false,
                 needLogin : true
             }
         })
@@ -45,6 +49,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
             url: '/home/terrace',
             templateUrl: 'views/terrace.html',
             data: {
+                needStore: false,
                 needLogin : true
             }
         })
@@ -53,6 +58,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
             url: '/home/frontier',
             templateUrl: 'views/frontier.html',
             data: {
+                needStore: false,
                 needLogin : true
             }
         })
@@ -61,6 +67,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
             url: '/home/technoedge',
             templateUrl: 'views/technoedge.html',
             data: {
+                needStore: false,
                 needLogin : true
             }
         })
@@ -69,6 +76,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
             url: '/home/koufu',
             templateUrl: 'views/koufu.html',
             data: {
+                needStore: false,
                 needLogin : true
             }
         })
@@ -77,6 +85,7 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
             url: '/home/foodclique',
             templateUrl: 'views/foodclique.html',
             data: {
+                needStore: false,
                 needLogin : true
             }
         })
@@ -85,7 +94,8 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
             url: '/home',
             templateUrl : 'views/loggedin.html',
             data: {
-                needLogin : true
+                needLogin : true,
+                needStore: false
             }
         })
 
@@ -93,9 +103,20 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
             url: '/home/account',
             templateUrl : 'views/account.html',
             data: {
-                needLogin : true
+                needLogin : true,
+                needStore : false
             }
-        });
+        })
+
+        .state('store', {
+            url: '/home/store',
+            templateUrl : 'views/store.html',
+            data: {
+                needLogin : true,
+                needStore: true
+            }
+
+        })
 
 
 });
@@ -106,7 +127,13 @@ app.run(function($rootScope, $localStorage, $state){
 
         var user = $localStorage.user;
 
-        if (!to.data.needLogin && user.authenticated){
+        // If need store and user is not a storeowner.
+        if (to.data.needStore && !user.isStoreOwner){
+            e.preventDefault();
+            $state.go("home");
+        }
+
+        else if (!to.data.needLogin && user.authenticated){
             e.preventDefault();
             $state.go("home");
         }
@@ -114,6 +141,7 @@ app.run(function($rootScope, $localStorage, $state){
             e.preventDefault();
             $state.go("default");
         }
+
 
 
 
@@ -175,6 +203,12 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
         $localStorage.user.authenticated = true;
         $localStorage.user.userToken = token;
         ivleInfo.getUsername(token).then(function(data){
+            if (data === "LOW JIAN SHENG"){
+                $localStorage.user.isStoreOwner = true;
+            }
+            else {
+                $localStorage.user.isStoreOwner = false;
+            }
             $localStorage.user.userName = data;
             $rootScope.user = $localStorage.user;
         });
@@ -233,6 +267,7 @@ var orderUp = {a:"", b:yourOrder, c:totalCost};
     console.log(orderUp);
 
 });
+
 
 /*
  Service to store the information of a user. Currently under construction.

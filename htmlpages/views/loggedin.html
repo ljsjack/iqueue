@@ -57,6 +57,11 @@
                                 <li>
                                     <a ui-sref="account">Account</a>
                                 </li>
+
+                                <li>
+                                    <a ng-show="user.isStoreOwner" ui-sref="store">My Store</a>
+                                </li>
+
                                 <li>
                                     <a ui-sref="default" data-ng-click="logOut()">Log Out</a>
                                 </li>
