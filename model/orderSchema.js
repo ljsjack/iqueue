@@ -4,9 +4,9 @@ var restful = require('node-restful');
 var mongoose = restful.mongoose;
 
 var OrderSchema = new mongoose.Schema({
-    username: String,
+    name : String,
     orders: [{name: String, price:Number ,count: Number}],
-    totalCost: Number
+    //totalCost: Number
 });
 
 
