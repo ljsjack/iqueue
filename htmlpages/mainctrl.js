@@ -123,13 +123,6 @@ app.run(function($rootScope, $localStorage, $state){
 
 
 
-
-
-
-
-
-
-
 app.factory('ivleInfo', function($http, $q){
 
     var baseUrl = "https://ivle.nus.edu.sg/api/Lapi.svc";
@@ -187,7 +180,6 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
         });
 
 
-
         // Redirecting the user to the loggedin page.
         if ($localStorage.user.authenticated) {
             $location.path('/loggedin');
@@ -200,11 +192,12 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
         $localStorage.user = null;
         $state.go('default');
 
-    }
+    };
+
+
 
 
 });
-
 
 
 app.controller('loggedInCtrl', function($location, $scope, $rootScope, $localStorage, ivleInfo){
@@ -227,6 +220,19 @@ app.controller('firstPageCtrl', function($location, $scope, $rootScope, $localSt
 
 });
 
+app.controller('accountCtrl', function($localStorage){
+
+var userName = $localStorage.user.userName;
+var yourOrder = shoppingCart.listCart();
+    var totalCost = shoppingCart.totalCart();
+    console.log("your name is "+userName);
+    console.log("the total cost is "+totalCost);
+    console.log("you ordered "+yourOrder[0].name);
+var orderUp = {a:"", b:yourOrder, c:totalCost};
+    orderUp.a = userName;
+    console.log(orderUp);
+
+});
 
 /*
  Service to store the information of a user. Currently under construction.
