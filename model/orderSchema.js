@@ -5,7 +5,7 @@ var mongoose = restful.mongoose;
 
 var OrderSchema = new mongoose.Schema({
     username: String,
-    orders: [{food: String}, {qty: Number}],
+    orders: [{food: String, qty: Number}],
     totalCost: Number
 });
 

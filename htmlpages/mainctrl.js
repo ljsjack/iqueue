@@ -220,6 +220,11 @@ app.controller('firstPageCtrl', function($location, $scope, $rootScope, $localSt
 
 });
 
+app.controller('accountCtrl', function(){
+
+$localStorage.user.userName
+
+});
 
 /*
  Service to store the information of a user. Currently under construction.
