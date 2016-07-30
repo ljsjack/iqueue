@@ -107,19 +107,27 @@
                 <div id="stall1" class="tab-pane fade in active">
                     <h3>Chicken Rice Stall</h3>
                     <img src="images/chickenrice.jpg" alt="Stall 1" style="width:400px;height:300px;">
-                    <div class="right">
+                    <div class="right" id="accordion">
                         Select your dish!<br>
                         <span class="dropdown">
                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                                 Select Your Meal!<span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="put-in-cart" href="#" data-name="Chicken rice" data-price="2.30">Chicken rice</a></li>
-                                <li><a class="put-in-cart" href="#" data-name="Duck rice" data-price="2.50">Duck rice</a></li>
-                                <li><a class="put-in-cart" href="#" data-name="Char Siew rice" data-price="2.40">Char Siew rice</a></li>
+                                <li><a class="put-in-cart" data-name="Chicken rice" data-toggle="collapse"
+                                       data-parent="#accordion" href="#chickenrice" data-price="2.30">Chicken rice [$2.30]</a></li>
+                                <li><a class="put-in-cart" href="#" data-name="Duck rice" data-toggle="collapse"
+                                       data-parent="#accordion" data-target="#duckrice" data-price="2.50">Duck rice [$2.50]</a></li>
+                                <li><a class="put-in-cart" href="#" data-name="Char Siew rice" data-price="2.40">Char Siew rice [$2.40]</a></li>
                             </ul>
                             <button class="add-to-cart" type="button">Add to Cart!</button>
                             <button class="clear-cart">Clear Cart</button>
+                            <div id="chickenrice" class="collapse">
+                                Chicken with rice....you dont say?
+                            </div>
+                            <div id="duckrice" class="collapse">
+                                Duck with rice....you dont say?
+                            </div>
                         </span>
                     </div>
                 </div>
@@ -186,6 +194,9 @@
         </div>
     </div>
 </div>
+
+
+
 <script src="js/shoppingCart.js"></script>
 <script>
     var name ;
@@ -205,6 +216,8 @@
     //var price = Number($(this).attr("data-price"));
     name = $(this).attr("data-name");
     price = Number($(this).attr("data-price"));
+
+
     console.log(name);
 
     });
@@ -274,6 +287,8 @@
     displayCart();
     });
     displayCart()
+
+   
 </script>
 
 <div>

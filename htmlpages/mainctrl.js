@@ -266,8 +266,9 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
     console.log("your name is "+userName);
     console.log("the total cost is "+totalCost);
     console.log("you ordered "+yourOrder[0].name);
+
     var orderUp = {userName:"", orders:yourOrder, total : totalCost};
-    orderUp.userName = userName;
+    orderUp.userName = userName;    
     console.log(orderUp);
 
 
