@@ -263,13 +263,10 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
     var userName = $localStorage.user.userName;
     var yourOrder = shoppingCart.listCart();
     var totalCost = shoppingCart.totalCart();
-    console.log("your name is "+userName);
-    console.log("the total cost is "+totalCost);
-    console.log("you ordered "+yourOrder[0].name);
+
 
     var orderUp = {userName:"", orders:yourOrder, total : totalCost};
     orderUp.userName = userName;    
-    console.log(orderUp);
 
 
     /*
@@ -279,11 +276,15 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
     $scope.checkOut = function(){
 
         if (confirm("Are you sure you want to check out your order? This is irreversible.")){
-            alert("Order Sent!");
             console.log(orderUp);
             $scope.newOrder = new Server(orderUp);
             $scope.newOrder.$save();
+
+            // Destroying the local data
+            shoppingCart.clearCart();
+            alert("Order Sent! Redirecting to home.");
             $state.go('home');
+
         }
         else{
 
