@@ -83,6 +83,64 @@
         <div class="col-lg-offset-1 col-lg-5">
             <button ng-click="getData()">Refresh</button>
             {{getOrders}}
+            <div class="row">
+                <div class="text-center">
+                    <ul id="show-cart">
+                        <ul>???????</ul>
+                    </ul>
+                    <div>You have <span>x</span> items in your cart</div>
+                    <div>Total Cart:$<span id="getCartTotal()"></span></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<div class="row">
+    <div class="text-center">
+        <ul id="show-cart">
+            <ul>???????</ul>
+        </ul>
+        <div>You have <span>x</span> items in your cart</div>
+        <div>Total Cart:$<span id="getCartTotal()"></span></div>
+    </div>
+</div>
+
+
+<!--
+<script src="js/shoppingCart.js"></script>
+<script>
+    function displayCart() {
+        var cartArray = shoppingCart.listCart();
+        console.log(cartArray);
+        var output = "";
+        output += '<table class="table table-bordered">' + "<thead>"
+                +"<tr>" + "<th>" + "Dish" + "</th>"
+                +"<th>" + "Price" + "</th>"
+                +"<th>" + "Total quantity" + "</th>"
+                +"<th>" + "Total price" + "</th>"
+                +"</tr>" + "</thead>" + "<tbody>";
+        for (var i in cartArray) {
+            output += "<tr>"
+                    +"<td>" + $scope.getOrders.name + "</td>"
+                    +"<td>"+ $Scope.getOrders.price + "</td>"
+                    +"<td>" + "<input class='item-count' type='number.toFixed(0)' data-name='"
+                    +$scope.getOrders.name +"' value='" + $Scope.getOrders.count+"' >"
+                    +" <button class='plus-item' data-name='"
+                    +$scope.getOrders.name+"'>+</button>"
+                    +" <button class='subtract-item' data-name='"
+                    +$scope.getOrders.name+"'>-</button>"
+                    +" <button class='delete-item' data-name='"
+                    +$scope.getOrders.name+"'>X</button>"
+                    + "</td>"
+                    +"<td>"+$scope.getOrders.total + "</td>"
+                    +"</tr>";
+        }
+        output += "</table>"
+        $("#show-cart").html(output);
+        $("#count-cart").html( shoppingCart.countCart() );
+        $("#total-cart").html( shoppingCart.totalCart() );
+    }
+
+</script>
+-->
