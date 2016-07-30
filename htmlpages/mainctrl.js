@@ -278,10 +278,17 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
      */
     $scope.checkOut = function(){
 
-        console.log(orderUp);
-        $scope.newOrder = new Server(orderUp);
-        $scope.newOrder.$save();
-        $state.go('home');
+        if (confirm("Are you sure you want to check out your order? This is irreversible.")){
+            alert("Order Sent!");
+            console.log(orderUp);
+            $scope.newOrder = new Server(orderUp);
+            $scope.newOrder.$save();
+            $state.go('home');
+        }
+        else{
+
+        }
+
 
     }
 
