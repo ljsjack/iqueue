@@ -25,7 +25,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Routes
-app.use('/api', require('./routes/api'));
+var api = require('./routes/api');
+app.use('/api', api);
 
 // Routing to push client to home page.
 app.use(function(req, res) {

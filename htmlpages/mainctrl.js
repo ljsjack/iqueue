@@ -266,8 +266,8 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
     console.log("your name is "+userName);
     console.log("the total cost is "+totalCost);
     console.log("you ordered "+yourOrder[0].name);
-    var orderUp = {name:"", orders:yourOrder};
-    orderUp.a = userName;
+    var orderUp = {userName:"", orders:yourOrder, total : totalCost};
+    orderUp.userName = userName;
     console.log(orderUp);
 
 
@@ -277,17 +277,28 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
      */
     $scope.checkOut = function(){
 
-
         console.log(orderUp);
         $scope.newOrder = new Server(orderUp);
         $scope.newOrder.$save();
-       //$state.go('home');
-
+        $state.go('home');
 
     }
 
 });
 
+
+app.controller('storeCtrl', function($localStorage, Server, $scope){
+
+
+    $scope.getData = function(){
+        $scope.getOrders = Server.query(function(){
+            console.log($scope.getOrders);
+        });
+
+    };
+
+
+});
 
 /*
  Service to store the information of a user. Currently under construction.
