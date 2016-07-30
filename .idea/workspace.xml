@@ -30,7 +30,7 @@
       <file leaf-file-name="loggedin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmlpages/views/loggedin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="2400">
               <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
               <folding />
             </state>
@@ -50,8 +50,8 @@
       <file leaf-file-name="terrace.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmlpages/views/terrace.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7300">
-              <caret line="292" column="0" selection-start-line="292" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
+            <state relative-caret-position="1158">
+              <caret line="280" column="18" selection-start-line="280" selection-start-column="17" selection-end-line="280" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -63,8 +63,8 @@
       <file leaf-file-name="account.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmlpages/views/account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="185" column="24" selection-start-line="185" selection-start-column="12" selection-end-line="185" selection-end-column="24" />
+            <state relative-caret-position="-721">
+              <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,8 +73,8 @@
       <file leaf-file-name="shoppingCart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmlpages/js/shoppingCart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1911">
-              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+            <state relative-caret-position="744">
+              <caret line="130" column="5" selection-start-line="3" selection-start-column="0" selection-end-line="130" selection-end-column="5" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -82,21 +82,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainctrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mainctrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/htmlpages/mainctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="299" column="6" selection-start-line="299" selection-start-column="5" selection-end-line="299" selection-end-column="6" />
+            <state relative-caret-position="425">
+              <caret line="304" column="12" selection-start-line="304" selection-start-column="12" selection-end-line="304" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="store.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="store.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmlpages/views/store.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="95" column="10" selection-start-line="95" selection-start-column="10" selection-end-line="95" selection-end-column="10" />
+            <state relative-caret-position="250">
+              <caret line="74" column="18" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -157,8 +157,8 @@
         <option value="$PROJECT_DIR$/htmlpages/views/account.html" />
         <option value="$PROJECT_DIR$/model/orderSchema.js" />
         <option value="$PROJECT_DIR$/htmlpages/views/terrace.html" />
-        <option value="$PROJECT_DIR$/htmlpages/mainctrl.js" />
         <option value="$PROJECT_DIR$/htmlpages/views/store.html" />
+        <option value="$PROJECT_DIR$/htmlpages/mainctrl.js" />
       </list>
     </option>
   </component>
@@ -201,6 +201,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -253,7 +254,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -378,11 +378,12 @@
       <workItem from="1469772812739" duration="140000" />
       <workItem from="1469773293633" duration="6607000" />
       <workItem from="1469848999613" duration="3955000" />
+      <workItem from="1469858467733" duration="3063000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80872000" />
+    <option name="totallyTimeSpent" value="83935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -582,7 +583,7 @@
     <entry file="file://$PROJECT_DIR$/htmlpages/views/cart.html" />
     <entry file="file://$PROJECT_DIR$/htmlpages/views/loggedin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="2400">
           <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
           <folding />
         </state>
@@ -603,30 +604,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/terrace.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7300">
-          <caret line="292" column="0" selection-start-line="292" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/htmlpages/js/cartFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="8" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/account.html">
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/terrace.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="185" column="24" selection-start-line="185" selection-start-column="12" selection-end-line="185" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="1158">
+          <caret line="280" column="18" selection-start-line="280" selection-start-column="17" selection-end-line="280" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -638,28 +630,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-721">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/htmlpages/js/shoppingCart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1911">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        <state relative-caret-position="744">
+          <caret line="130" column="5" selection-start-line="3" selection-start-column="0" selection-end-line="130" selection-end-column="5" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/mainctrl.js">
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/store.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="299" column="6" selection-start-line="299" selection-start-column="5" selection-end-line="299" selection-end-column="6" />
+        <state relative-caret-position="250">
+          <caret line="74" column="18" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/store.html">
+    <entry file="file://$PROJECT_DIR$/htmlpages/mainctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="95" column="10" selection-start-line="95" selection-start-column="10" selection-end-line="95" selection-end-column="10" />
+        <state relative-caret-position="425">
+          <caret line="304" column="12" selection-start-line="304" selection-start-column="12" selection-end-line="304" selection-end-column="12" />
           <folding />
         </state>
       </provider>

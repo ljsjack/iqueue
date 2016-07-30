@@ -298,53 +298,18 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
 app.controller('storeCtrl', function($localStorage, Server, $scope){
 
 
+
     $scope.getData = function(){
         $scope.getOrders = Server.query(function(){
             console.log($scope.getOrders);
-            $scope.totalMonday = $scope.getOrders[0].total;
+            
         });
 
     };
 
-    $scope.getCartCount = function(){
-        console.log(test);
-    };
-
-    function displayCart() {
-        console.log($scope.getOrders.name);
-        var cartArray = shoppingCart.listCart();
-        console.log(cartArray);
-        var output = "";
-        output += '<table class="table table-bordered">' + "<thead>"
-            +"<tr>" + "<th>" + "Dish" + "</th>"
-            +"<th>" + "Price" + "</th>"
-            +"<th>" + "Total quantity" + "</th>"
-            +"<th>" + "Total price" + "</th>"
-            +"</tr>" + "</thead>" + "<tbody>";
-        for (var i in cartArray) {
-            output += "<tr>"
-                +"<td>" + $scope.getOrders.name + "</td>"
-                +"<td>"+ $Scope.getOrders.price + "</td>"
-                +"<td>" + "<input class='item-count' type='number.toFixed(0)' data-name='"
-                +$scope.getOrders.name +"' value='" + $Scope.getOrders.count+"' >"
-                +" <button class='plus-item' data-name='"
-                +$scope.getOrders.name+"'>+</button>"
-                +" <button class='subtract-item' data-name='"
-                +$scope.getOrders.name+"'>-</button>"
-                +" <button class='delete-item' data-name='"
-                +$scope.getOrders.name+"'>X</button>"
-                + "</td>"
-                +"<td>"+$scope.getOrders.total + "</td>"
-                +"</tr>";
-        }
-        output += "</table>"
-        $("#show-cart").html(output);
-        $("#count-cart").html( shoppingCart.countCart() );
-        $("#total-cart").html( shoppingCart.totalCart() );
-    }
-
 
 });
+
 
 /*
  Service to store the information of a user. Currently under construction.
