@@ -7,7 +7,7 @@ var order = require('../model/orderSchema.js');
 
 // GET the whole database
 router.get('/', function(req, res, next) {
-    order.find(function (err, api) {
+    order.find({},function (err, api) {
         if (err) return next(err);
         res.json(api);
     });

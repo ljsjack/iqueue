@@ -118,6 +118,15 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
 
         })
 
+        .state('order', {
+            url: '/home/orders',
+            templateUrl: 'views/orders.html',
+            data: {
+                needLogin : true,
+                needStore : false
+            }
+        })
+
 
 });
 
@@ -305,10 +314,19 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
     $scope.getData = function(){
         $scope.getOrders = Server.query(function(){
             console.log($scope.getOrders);
-            
+
         });
 
     };
+
+
+});
+
+app.controller('ordersCtrl', function($localStorage, Server, $scope){
+
+
+    $scope.testData = Server.query({"userName" : "LOW JIAN SHENG"});
+    console.log($scope.testData);
 
 
 });
