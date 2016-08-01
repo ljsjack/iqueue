@@ -351,7 +351,7 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
                             + "<td>" + item[p].name + "</td>"
                             + "<td>" + item[p].count + "</td>"
                             //+ "<td>" + $scope.getOrders[i].total + "</td>"
-                            + "<td>" +"<button>Clear</button>" + "</td>"
+                            + "<td>" +"<button class='clear-item'>Clear</button>" + "</td>"
                             + "</tr>";
                     }
                 output += "</tbody>" + "</table>";
@@ -360,7 +360,9 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
 
             $("#show-cart").html(output);
         });
-
+        $("#show-cart").on("click", ".clear-item", function(event){
+            console.log("this works!");
+        });
     };
 
 
