@@ -287,6 +287,8 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
     console.log(orderUp);
 
 
+
+
     /*
      Checkout function sends the order data into the database.
      The localStorage of order data is also destroyed.
@@ -317,10 +319,19 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
 app.controller('storeCtrl', function($localStorage, Server, $scope){
 
 
+
+
+
     $scope.getData = function(){
+
         $scope.getOrders = Server.query(function() {
+
+
             console.log($scope.getOrders);
 
+            $scope.clearOrder = function(){
+                console.log("This works");
+            }
 
             var output = "";
 
@@ -348,6 +359,9 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
                     break
                 }
 
+                $scope.clearOrder = function(){
+                    console.log("Hello");
+                }
                     for (var p in item) {
                         //console.log($scope.getOrders[i].userName)
                         //console.log(item[p].name);
@@ -357,10 +371,13 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
                             //+ "<td>" + $scope.getOrders[i].userName + "</td>"
                             + "<td>" + item[p].name + "</td>"
                             + "<td>" + item[p].count + "</td>"
-                            + "<td>" +"<button>Clear</button>" + "</td>"
+                            + "<td>" +"<button onclick='clearOrder()'>Clear</button>" + "</td>"
                             + "</tr>";
                     }
+
+
                 output += "</tbody>" + "</table>";
+
 
             }
 
