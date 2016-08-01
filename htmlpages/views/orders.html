@@ -81,16 +81,36 @@
         </nav>
     </div>
 
-    <br><br><br><br>
+    <br><br><br>
+
     <div class="row">
-        <div class="col-lg-offset-2 col-lg-5">
-            <table>
-                <tr ng-repeat="x in testData">
-                    <td>{{x.userName}}</td>
-                    <td ng-repeat="y in x.orders">{{y.name}}</td>
-                    <td>${{x.total}}</td>
-                </tr>
-            </table>
+        <div class="text-center">
+            <h2>{{user.userName}}, please wait for your food.</h2>
+        </div>
+    </div>
+
+
+    <div class="row" style="padding-top:50px;">
+
+
+        <div class="col-lg-offset-4 col-lg-4">
+            <div class="well well-lg">
+                <div class ="row">
+                    <div class = "text-center">
+                        <div style="font-size:30px; font-family:'Allura';">Order</div>
+                    </div>
+                </div>
+
+                <div class = "row">
+                    <table>
+                        <tr ng-repeat="x in testData">
+                            <td ng-repeat="y in x.orders">{{y.name}}</td>
+                            <td>{{x.total | currency}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </div>
 

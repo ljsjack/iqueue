@@ -236,8 +236,15 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
     }
 
     $scope.logOut = function(){
-        $localStorage.user = null;
-        $state.go('default');
+
+        if (confirm("Any unsaved carts will be deleted! Are you sure you want to log out?")){
+            shoppingCart.clearCart();
+            $localStorage.user = null;
+            $state.go('default');
+        }
+        else {
+
+        }
 
     };
 
@@ -342,7 +349,7 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
                             + "<td>" + $scope.getOrders[i].userName + "</td>"
                             + "<td>" + item[p].name + "</td>"
                             + "<td>" + item[p].count + "</td>"
-                            + "<td>" + $scope.getOrders[i].total + "</td>"
+                            + "<td>" + "$" + $scope.getOrders[i].total + "</td>"
                             + "<td>" +"<button>Clear</button>" + "</td>"
                             + "</tr>";
                     }
