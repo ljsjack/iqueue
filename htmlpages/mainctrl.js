@@ -302,13 +302,12 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
             // Destroying the local data
             shoppingCart.clearCart();
             alert("Order Sent! Redirecting to home.");
-            $state.go('home');
+            $state.go('order');
 
         }
         else{
 
         }
-
 
     }
 
@@ -336,11 +335,10 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
         $scope.allOrders[orderIndex].orders.splice(foodIndex,1);
 
         if ($scope.allOrders[orderIndex].orders.length == 0){
-
             $scope.id = $scope.allOrders[orderIndex]._id;
             Server.remove({id: $scope.id}, function(){
                 $scope.allOrders.splice(orderIndex,1);
-
+                $scope.allOrders = Server.query();
             });
         }
     };
@@ -348,11 +346,23 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
 
 });
 
-app.controller('ordersCtrl', function($localStorage, Server, $scope){
+app.controller('ordersCtrl', function($localStorage, Server, $scope) {
 
 
-    $scope.testData = Server.query({"userName" : "LOW JIAN SHENG"});
-    console.log($scope.testData);
+    $scope.testData = Server.query({"userName": $localStorage.user.userName}, function(){
+        console.log($scope.testData[0]);
+        console.log($scope.testData[1]);
+
+        if ($scope.testData.length === 0) {
+            $scope.testData.noOrder = "You currently do not have any orders.";
+            console.log($scope.testData.noOrder);
+        }
+        else {
+            $scope.testData.noOrder = undefined;
+        }
+    });
+
+
 
 
 });
