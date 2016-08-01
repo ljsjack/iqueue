@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="ordersCtrl">
 
     <div class="row">
         <!-- Navigation bar at the top of the page -->
@@ -81,16 +81,17 @@
         </nav>
     </div>
 
-    <br><br><br>
-
-    <div class="backgroundimages">
-        <div class="row" style="height:400px;">
-            <div class="text-center">
-                <h2>Food Clique @ uTown</h2>
-            </div>
+    <br><br><br><br>
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-5">
+            <table>
+                <tr ng-repeat="x in testData">
+                    <td>{{x.userName}}</td>
+                    <td ng-repeat="y in x.orders">{{y.name}}</td>
+                    <td>${{x.total}}</td>
+                </tr>
+            </table>
         </div>
     </div>
+
 </div>
-
-
-

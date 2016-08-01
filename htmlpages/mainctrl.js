@@ -118,6 +118,15 @@ app.config(function($urlRouterProvider, $stateProvider, $httpProvider, $location
 
         })
 
+        .state('order', {
+            url: '/home/orders',
+            templateUrl: 'views/orders.html',
+            data: {
+                needLogin : true,
+                needStore : false
+            }
+        })
+
 
 });
 
@@ -263,11 +272,10 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
     var userName = $localStorage.user.userName;
     var yourOrder = shoppingCart.listCart();
     var totalCost = shoppingCart.totalCart();
-    console.log("your name is "+userName);
-    console.log("the total cost is "+totalCost);
-    console.log("you ordered "+yourOrder[0].name);
+
 
     var orderUp = {userName:"", orders:yourOrder, total : totalCost};
+
     orderUp.userName = userName;
     console.log(orderUp);
 
@@ -279,11 +287,15 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
     $scope.checkOut = function(){
 
         if (confirm("Are you sure you want to check out your order? This is irreversible.")){
-            alert("Order Sent!");
             console.log(orderUp);
             $scope.newOrder = new Server(orderUp);
             $scope.newOrder.$save();
+
+            // Destroying the local data
+            shoppingCart.clearCart();
+            alert("Order Sent! Redirecting to home.");
             $state.go('home');
+
         }
         else{
 
@@ -302,18 +314,27 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
         $scope.getOrders = Server.query(function() {
             console.log($scope.getOrders);
 
+
             var output = "";
-            output += '<table class="table table-bordered">' + "<thead>"
-                + "<tr>"
-                + "<th>" + "Order Number" + "</th>"
-                + "<th>" + "Name" + "</th>"
-                + "<th>" + "Dish" + "</th>"
-                + "<th>" + "Total quantity" + "</th>"
-                + "<th>" + "Total price"+ "</th>"
-                + "<th>" + "Order completed?" + "</th>"
-                + "</tr>" + "</thead>" + "<tbody>";
+
 
             for (var i in $scope.getOrders) {
+                if ($scope.getOrders[i].userName === undefined){
+                    break;
+                }
+                var newI = 1 + Number(i);
+                output += '<table class="table table-bordered" >' + "<thead>"
+                    + "<tr>" + "<th width='30%'>" + "Order: " + newI + "</th>"
+                    + "<th width='50%'>" + "Name: " + $scope.getOrders[i].userName + "</th>"
+                    + "<th width='20%'>" + "Total price: " + $scope.getOrders[i].total + "</th>"
+                    + "</tr>"
+                    // + "<th>" + "Order Number" + "</th>"
+                    //+ "<th>" + "Name" + "</th>"
+                    + "<th>" + "Dish" + "</th>"
+                    + "<th>" + "Total quantity" + "</th>"
+                    //+ "<th>" + "Total price"+ "</th>"
+                    + "<th>" + "Order completed?" + "</th>"
+                    + "</tr>" + "</thead>" + "<tbody>";
                 var item = $scope.getOrders[i].orders;
                 console.log(item);
                 if (item === undefined){
@@ -324,23 +345,32 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
                         //console.log($scope.getOrders[i].userName)
                         //console.log(item[p].name);
 
-                        var newI = Number(i)+1;
                         output += "<tr>"
-                            + "<td>" + newI + "</td>"
-                            + "<td>" + $scope.getOrders[i].userName + "</td>"
+                            //+ "<td>" + newI + "</td>"
+                            //+ "<td>" + $scope.getOrders[i].userName + "</td>"
                             + "<td>" + item[p].name + "</td>"
                             + "<td>" + item[p].count + "</td>"
-                            + "<td>" + $scope.getOrders[i].total + "</td>"
+                            //+ "<td>" + $scope.getOrders[i].total + "</td>"
                             + "<td>" +"<button>Clear</button>" + "</td>"
                             + "</tr>";
                     }
+                output += "</tbody>" + "</table>";
 
             }
-            output += "</tbody>" + "</table>"
+
             $("#show-cart").html(output);
         });
 
     };
+
+
+});
+
+app.controller('ordersCtrl', function($localStorage, Server, $scope){
+
+
+    $scope.testData = Server.query({"userName" : "LOW JIAN SHENG"});
+    console.log($scope.testData);
 
 
 });

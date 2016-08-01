@@ -56,7 +56,10 @@
                                     class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a ui-sref="account">Account</a>
+                                    <a ui-sref="account">Cart</a>
+                                </li>
+                                <li>
+                                    <a ui-sref="order">Order</a>
                                 </li>
                                 <li>
                                     <a ng-show="user.isStoreOwner" ui-sref="store">My Store</a>
@@ -80,13 +83,13 @@
 
     <br><br><br><br><br>
     <div class="row">
-        <div class="col-lg-offset-1 col-lg-5">
+        <div class="col-lg-offset-1 col-lg-8">
             <button ng-click="getData()">Refresh</button>
             <!--{{getOrders}}-->
             <div class="row">
-                <div class="text-center">
+                <div>
                     <ul id="show-cart">
-                        <ul>???????</ul>
+
                     </ul>
                     <div>You have {{getOrders[0].total}} items in your cart</div>
                     <div>Total Cart:${{getOrders[0].total}}</div>

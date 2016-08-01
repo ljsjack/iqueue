@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3d09f5a-0f97-4c0a-8d09-a3a68a647f60" name="Default" comment="" />
+    <list default="true" id="d3d09f5a-0f97-4c0a-8d09-a3a68a647f60" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlpages/views/orders.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/iqueue.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/iqueue_node_modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/mainctrl.js" afterPath="$PROJECT_DIR$/htmlpages/mainctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/aboutuslogged.html" afterPath="$PROJECT_DIR$/htmlpages/views/aboutuslogged.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/account.html" afterPath="$PROJECT_DIR$/htmlpages/views/account.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/deck.html" afterPath="$PROJECT_DIR$/htmlpages/views/deck.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/foodclique.html" afterPath="$PROJECT_DIR$/htmlpages/views/foodclique.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/frontier.html" afterPath="$PROJECT_DIR$/htmlpages/views/frontier.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/koufu.html" afterPath="$PROJECT_DIR$/htmlpages/views/koufu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/loggedin.html" afterPath="$PROJECT_DIR$/htmlpages/views/loggedin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/store.html" afterPath="$PROJECT_DIR$/htmlpages/views/store.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/technoedge.html" afterPath="$PROJECT_DIR$/htmlpages/views/technoedge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlpages/views/terrace.html" afterPath="$PROJECT_DIR$/htmlpages/views/terrace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api.js" afterPath="$PROJECT_DIR$/routes/api.js" />
+    </list>
     <ignored path="iQueueProj.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/htmlpages/views/loggedin.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2400">
-              <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
+              <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -46,11 +66,13 @@
       <file leaf-file-name="terrace.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmlpages/views/terrace.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="255" column="18" selection-start-line="255" selection-start-column="12" selection-end-line="255" selection-end-column="18" />
+            <state relative-caret-position="2288">
+              <caret line="258" column="18" selection-start-line="258" selection-start-column="12" selection-end-line="258" selection-end-column="18" />
               <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,27 +82,27 @@
         <entry file="file://$PROJECT_DIR$/htmlpages/views/account.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="59">
-              <caret line="168" column="9" selection-start-line="168" selection-start-column="9" selection-end-line="168" selection-end-column="38" />
+              <caret line="171" column="9" selection-start-line="171" selection-start-column="9" selection-end-line="171" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shoppingCart.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shoppingCart.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/htmlpages/js/shoppingCart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2581">
+            <state relative-caret-position="25">
               <caret line="1" column="4" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainctrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainctrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmlpages/mainctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="925">
-              <caret line="334" column="38" selection-start-line="334" selection-start-column="38" selection-end-line="334" selection-end-column="38" />
+            <state relative-caret-position="339">
+              <caret line="328" column="37" selection-start-line="328" selection-start-column="37" selection-end-line="328" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -89,8 +111,8 @@
       <file leaf-file-name="store.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmlpages/views/store.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
+            <state relative-caret-position="1828">
+              <caret line="93" column="24" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -373,16 +395,16 @@
       <workItem from="1469773293633" duration="6607000" />
       <workItem from="1469848999613" duration="3955000" />
       <workItem from="1469858467733" duration="3393000" />
-      <workItem from="1469952230883" duration="8693000" />
+      <workItem from="1469952230883" duration="12248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92958000" />
+    <option name="totallyTimeSpent" value="96513000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1932" height="1042" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16963351" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -489,13 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -593,7 +608,7 @@
     <entry file="file://$PROJECT_DIR$/htmlpages/views/loggedin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2400">
-          <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
+          <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -606,14 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/store.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/orderSchema.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -622,37 +629,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/js/shoppingCart.js">
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2581">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="4" />
+        <state relative-caret-position="59">
+          <caret line="171" column="9" selection-start-line="171" selection-start-column="9" selection-end-line="171" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htmlpages/views/account.html">
+    <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="168" column="9" selection-start-line="168" selection-start-column="9" selection-end-line="168" selection-end-column="38" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/htmlpages/views/terrace.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="255" column="18" selection-start-line="255" selection-start-column="12" selection-end-line="255" selection-end-column="18" />
+        <state relative-caret-position="2288">
+          <caret line="258" column="18" selection-start-line="258" selection-start-column="12" selection-end-line="258" selection-end-column="18" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/views/store.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1828">
+          <caret line="93" column="24" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/htmlpages/mainctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="334" column="38" selection-start-line="334" selection-start-column="38" selection-end-line="334" selection-end-column="38" />
+        <state relative-caret-position="339">
+          <caret line="328" column="37" selection-start-line="328" selection-start-column="37" selection-end-line="328" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlpages/js/shoppingCart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="4" />
           <folding />
         </state>
       </provider>

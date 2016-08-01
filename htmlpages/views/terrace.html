@@ -58,7 +58,10 @@
                                     class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a ui-sref="account">Account</a>
+                                    <a ui-sref="account">Cart</a>
+                                </li>
+                                <li>
+                                    <a ui-sref="order">Order</a>
                                 </li>
                                 <li>
                                     <a ng-show="user.isStoreOwner" ui-sref="store">My Store</a>
@@ -96,15 +99,15 @@
     <!--<h2>Dynamic Pills</h2> -->
     <div class="row">
         <ul class="nav nav-pills">
-            <li class="active"><a data-toggle="pill" href="#stall1">Chicken Rice Stall</a></li>
-            <li><a data-toggle="pill" href="#stall2">Western Stall</a></li>
-            <li><a data-toggle="pill" href="#stall3">Stall 3</a></li>
-            <li><a data-toggle="pill" href="#stall4">Stall 4</a></li>
+            <li class="active"><a data-toggle="pill" href="#chickenricestore">Chicken Rice Stall</a></li>
+            <li><a data-toggle="pill" href="#western">Western Stall</a></li>
+            <li><a data-toggle="pill" href="#banmian">Ban Mian</a></li>
+            <li><a data-toggle="pill" href="#japanese">Japanese</a></li>
         </ul>
 
         <div class="col-lg-12">
             <div class="tab-content">
-                <div id="stall1" class="tab-pane fade in active">
+                <div id="chickenricestore" class="tab-pane fade in active">
                     <h3>Chicken Rice Stall</h3>
                     <img src="images/chickenrice.jpg" alt="Stall 1" style="width:400px;height:300px;">
                     <div class="right" id="accordion">
@@ -132,7 +135,7 @@
                     </div>
                 </div>
 
-                <div id="stall2" class="tab-pane fade">
+                <div id="western" class="tab-pane fade">
                     <h3>Western Stall</h3>
                     <img src="images/western.jpg" alt="Stall 2" style="width:400px;height:300px;">
                     <div class="right">
@@ -151,8 +154,8 @@
                         </span>
                     </div>
                 </div>
-                <div id="stall3" class="tab-pane fade">
-                    <h3>Stall 3</h3>
+                <div id="banmian" class="tab-pane fade">
+                    <h3>Ban Mian & Fish Bee Hoon</h3>
                     <img src="" alt="Stall 3" style="width:400px;height:300px;">
                     <div class="right">
                         Select your dish!<br>
@@ -171,8 +174,8 @@
                     </div>
                 </div>
 
-                <div id="stall4" class="tab-pane fade">
-                    <h3>Stall 4</h3>
+                <div id="japanese" class="tab-pane fade">
+                    <h3>Japanese</h3>
                     <img src="" alt="Stall 4" style="width:400px;height:300px;">
                     <div class="right">
                         Select your dish!<br>
