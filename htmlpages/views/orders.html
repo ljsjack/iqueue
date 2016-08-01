@@ -85,7 +85,7 @@
 
     <div class="row">
         <div class="text-center">
-            <h2>{{user.userName}}, please wait for your food.</h2>
+            <h2>Please wait for your food.</h2>
         </div>
     </div>
 
@@ -93,13 +93,15 @@
     <div class="row" style="padding-top:50px;">
 
 
-        <div class="col-sm-offset-4 col-sm-4">
+        <div class="col-sm-offset-4 col-sm-4 col-xs-offset-2 col-xs-8">
             <div class="well well-lg">
                 <div class ="row">
                     <div class = "text-center">
                         <div style="font-size:30px; font-family:'Allura';">Order</div>
                     </div>
                 </div>
+
+
 
                 <div class = "row">
 
@@ -136,6 +138,14 @@
                                 </td>
 
                             </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-default" ng-click="deleteData($index)" data-ng-show="x.readyPickup == 'true'">
+                                        Collect!
+                                    </button>
+                                </td>
+
+                            </tr>
 
                         </table>
 
@@ -144,6 +154,12 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="text-center" style="font-size:12px;">A button will appear when your food is ready for collection.</div>
+            </div>
+            <div class="row">
+                <div class="text-center" style="font-size:12px;">Please click it when collecting food.</div>
+            </div>
         </div>
     </div>
 

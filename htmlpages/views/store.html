@@ -115,7 +115,7 @@
                             Quantity
                         </th>
                         <th>
-                            Completed?
+                            <button type="button" class="btn btn-success" data-ng-click="clearOrder($index)">Completed</button>
                         </th>
                     </tr>
                     <tr ng-repeat="food in order.orders">
@@ -125,9 +125,11 @@
                         <td>
                             {{food.count}}
                         </td>
+                        <!--
                         <td>
-                            <button type="button" class="btn btn-success" data-ng-click="clearOrder($parent.$index, $index)">Clear</button>
+
                         </td>
+                        -->
                     </tr>
 
 
