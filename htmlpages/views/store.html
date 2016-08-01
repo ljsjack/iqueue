@@ -82,19 +82,57 @@
     </div>
 
     <br><br><br><br><br>
+
     <div class="row">
+        <button type="button" class="btn btn-Info" ng-click="getData()">Refresh</button>
+    </div>
+
+    <div class="row" style="padding-top:2%;">
 
         <div class="col-lg-offset-1 col-lg-8">
-            <button ng-click="getData()">Refresh</button>
             <!--{{getOrders}}-->
-            <div class="row">
-                <div>
-                    <ul id="show-cart">
+            <div class="row" ng-repeat = "order in allOrders">
 
-                    </ul>
-                    <div>You have {{getOrders[0].total}} items in your cart</div>
-                    <div>Total Cart:${{getOrders[0].total}}</div>
-                </div>
+                <table class="table table-bordered">
+                    <tr>
+                        <th style="width:30%">
+                           Order : {{$index + 1}}
+                        </th>
+
+                        <th style="width: 40%">
+                            Name : {{order.userName}}
+                        </th>
+
+                        <th style="width:35%">
+                            Total Price : {{order.total | currency}}
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Dish
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+                        <th>
+                            Completed?
+                        </th>
+                    </tr>
+                    <tr ng-repeat="food in order.orders">
+                        <td>
+                            {{food.name}}
+                        </td>
+                        <td>
+                            {{food.count}}
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-success" data-ng-click="clearOrder($parent.$index, $index)">Clear</button>
+                        </td>
+                    </tr>
+
+
+                </table>
+
             </div>
         </div>
     </div>

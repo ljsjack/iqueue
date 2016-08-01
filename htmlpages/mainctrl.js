@@ -284,7 +284,6 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
     var orderUp = {userName:"", orders:yourOrder, total : totalCost};
 
     orderUp.userName = userName;
-    console.log(orderUp);
 
 
 
@@ -318,72 +317,32 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
 
 app.controller('storeCtrl', function($localStorage, Server, $scope){
 
+    $scope.allOrders = Server.query();
 
+    /*
+     Gets the data from the database.
+     */
+    $scope.getData = function() {
+        $scope.allOrders = Server.query();
+    };
 
+    /*
+     * This function clears the individual food order from the local $scope.
+     * It clears the whole order by the user when there are no more food orders. It will also
+     clear the order from the data base.
+     */
+    $scope.clearOrder = function(orderIndex,foodIndex){
 
+        $scope.allOrders[orderIndex].orders.splice(foodIndex,1);
 
-    $scope.getData = function(){
+        if ($scope.allOrders[orderIndex].orders.length == 0){
 
-        $scope.getOrders = Server.query(function() {
+            $scope.id = $scope.allOrders[orderIndex]._id;
+            Server.remove({id: $scope.id}, function(){
+                $scope.allOrders.splice(orderIndex,1);
 
-
-            console.log($scope.getOrders);
-
-            $scope.clearOrder = function(){
-                console.log("This works");
-            }
-
-            var output = "";
-
-
-            for (var i in $scope.getOrders) {
-                if ($scope.getOrders[i].userName === undefined){
-                    break;
-                }
-                var newI = 1 + Number(i);
-                output += '<table class="table table-bordered" >' + "<thead>"
-                    + "<tr>" + "<th width='30%'>" + "Order: " + newI + "</th>"
-                    + "<th width='50%'>" + "Name: " + $scope.getOrders[i].userName + "</th>"
-                    + "<th width='20%'>" + "Total price: " + $scope.getOrders[i].total + "</th>"
-                    + "</tr>"
-                    // + "<th>" + "Order Number" + "</th>"
-                    //+ "<th>" + "Name" + "</th>"
-                    + "<th>" + "Dish" + "</th>"
-                    + "<th>" + "Total quantity" + "</th>"
-                    //+ "<th>" + "Total price"+ "</th>"
-                    + "<th>" + "Order completed?" + "</th>"
-                    + "</tr>" + "</thead>" + "<tbody>";
-                var item = $scope.getOrders[i].orders;
-                console.log(item);
-                if (item === undefined){
-                    break
-                }
-
-                $scope.clearOrder = function(){
-                    console.log("Hello");
-                }
-                    for (var p in item) {
-                        //console.log($scope.getOrders[i].userName)
-                        //console.log(item[p].name);
-
-                        output += "<tr>"
-                            //+ "<td>" + newI + "</td>"
-                            //+ "<td>" + $scope.getOrders[i].userName + "</td>"
-                            + "<td>" + item[p].name + "</td>"
-                            + "<td>" + item[p].count + "</td>"
-                            + "<td>" +"<button onclick='clearOrder()'>Clear</button>" + "</td>"
-                            + "</tr>";
-                    }
-
-
-                output += "</tbody>" + "</table>";
-
-
-            }
-
-            $("#show-cart").html(output);
-        });
-
+            });
+        }
     };
 
 
