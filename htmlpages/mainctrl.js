@@ -321,18 +321,27 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
         $scope.getOrders = Server.query(function() {
             console.log($scope.getOrders);
 
+
             var output = "";
-            output += '<table class="table table-bordered">' + "<thead>"
-                + "<tr>"
-                + "<th>" + "Order Number" + "</th>"
-                + "<th>" + "Name" + "</th>"
-                + "<th>" + "Dish" + "</th>"
-                + "<th>" + "Total quantity" + "</th>"
-                + "<th>" + "Total price"+ "</th>"
-                + "<th>" + "Order completed?" + "</th>"
-                + "</tr>" + "</thead>" + "<tbody>";
+
 
             for (var i in $scope.getOrders) {
+                if ($scope.getOrders[i].userName === undefined){
+                    break;
+                }
+                var newI = 1 + Number(i);
+                output += '<table class="table table-bordered" >' + "<thead>"
+                    + "<tr>" + "<th width='30%'>" + "Order: " + newI + "</th>"
+                    + "<th width='50%'>" + "Name: " + $scope.getOrders[i].userName + "</th>"
+                    + "<th width='20%'>" + "Total price: " + $scope.getOrders[i].total + "</th>"
+                    + "</tr>"
+                    // + "<th>" + "Order Number" + "</th>"
+                    //+ "<th>" + "Name" + "</th>"
+                    + "<th>" + "Dish" + "</th>"
+                    + "<th>" + "Total quantity" + "</th>"
+                    //+ "<th>" + "Total price"+ "</th>"
+                    + "<th>" + "Order completed?" + "</th>"
+                    + "</tr>" + "</thead>" + "<tbody>";
                 var item = $scope.getOrders[i].orders;
                 console.log(item);
                 if (item === undefined){
@@ -343,19 +352,18 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
                         //console.log($scope.getOrders[i].userName)
                         //console.log(item[p].name);
 
-                        var newI = Number(i)+1;
                         output += "<tr>"
-                            + "<td>" + newI + "</td>"
-                            + "<td>" + $scope.getOrders[i].userName + "</td>"
+                            //+ "<td>" + newI + "</td>"
+                            //+ "<td>" + $scope.getOrders[i].userName + "</td>"
                             + "<td>" + item[p].name + "</td>"
                             + "<td>" + item[p].count + "</td>"
-                            + "<td>" + "$" + $scope.getOrders[i].total + "</td>"
                             + "<td>" +"<button>Clear</button>" + "</td>"
                             + "</tr>";
                     }
+                output += "</tbody>" + "</table>";
 
             }
-            output += "</tbody>" + "</table>";
+
             $("#show-cart").html(output);
         });
 
