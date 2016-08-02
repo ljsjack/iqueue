@@ -236,8 +236,15 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
     }
 
     $scope.logOut = function(){
-        $localStorage.user = null;
-        $state.go('default');
+
+        if (confirm("Any unsaved carts will be deleted! Are you sure you want to log out?")){
+            shoppingCart.clearCart();
+            $localStorage.user = null;
+            $state.go('default');
+        }
+        else {
+
+        }
 
     };
 
@@ -277,7 +284,8 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
     var orderUp = {userName:"", orders:yourOrder, total : totalCost};
 
     orderUp.userName = userName;
-    console.log(orderUp);
+
+
 
 
     /*
@@ -294,13 +302,12 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
             // Destroying the local data
             shoppingCart.clearCart();
             alert("Order Sent! Redirecting to home.");
-            $state.go('home');
+            $state.go('order');
 
         }
         else{
 
         }
-
 
     }
 
@@ -309,70 +316,53 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
 
 app.controller('storeCtrl', function($localStorage, Server, $scope){
 
+    $scope.allOrders = Server.query();
 
-    $scope.getData = function(){
-        $scope.getOrders = Server.query(function() {
-            console.log($scope.getOrders);
+    /*
+     Gets the data from the database.
+     */
+    $scope.getData = function() {
+        $scope.allOrders = Server.query();
+    };
 
+    /*
+     * This function clears the individual food order from the local $scope.
+     * It clears the whole order by the user when there are no more food orders. It will also
+     clear the order from the data base.
+     */
+    $scope.clearOrder = function(orderIndex,foodIndex){
 
-            var output = "";
+        $scope.allOrders[orderIndex].orders.splice(foodIndex,1);
 
-
-            for (var i in $scope.getOrders) {
-                if ($scope.getOrders[i].userName === undefined){
-                    break;
-                }
-                var newI = 1 + Number(i);
-                output += '<table class="table table-bordered" >' + "<thead>"
-                    + "<tr>" + "<th width='30%'>" + "Order: " + newI + "</th>"
-                    + "<th width='50%'>" + "Name: " + $scope.getOrders[i].userName + "</th>"
-                    + "<th width='20%'>" + "Total price: " + $scope.getOrders[i].total + "</th>"
-                    + "</tr>"
-                    // + "<th>" + "Order Number" + "</th>"
-                    //+ "<th>" + "Name" + "</th>"
-                    + "<th>" + "Dish" + "</th>"
-                    + "<th>" + "Total quantity" + "</th>"
-                    //+ "<th>" + "Total price"+ "</th>"
-                    + "<th>" + "Order completed?" + "</th>"
-                    + "</tr>" + "</thead>" + "<tbody>";
-                var item = $scope.getOrders[i].orders;
-                console.log(item);
-                if (item === undefined){
-                    break
-                }
-
-                    for (var p in item) {
-                        //console.log($scope.getOrders[i].userName)
-                        //console.log(item[p].name);
-
-                        output += "<tr>"
-                            //+ "<td>" + newI + "</td>"
-                            //+ "<td>" + $scope.getOrders[i].userName + "</td>"
-                            + "<td>" + item[p].name + "</td>"
-                            + "<td>" + item[p].count + "</td>"
-                            //+ "<td>" + $scope.getOrders[i].total + "</td>"
-                            + "<td>" +"<button class='clear-item'>Clear</button>" + "</td>"
-                            + "</tr>";
-                    }
-                output += "</tbody>" + "</table>";
-
-            }
-
-            $("#show-cart").html(output);
-        });
-        $("#show-cart").on("click", ".clear-item", function(event){
-            console.log("this works!");
-        });
+        if ($scope.allOrders[orderIndex].orders.length == 0){
+            $scope.id = $scope.allOrders[orderIndex]._id;
+            Server.remove({id: $scope.id}, function(){
+                $scope.allOrders.splice(orderIndex,1);
+                $scope.allOrders = Server.query();
+            });
+        }
     };
 
 
 });
 
-app.controller('ordersCtrl', function($localStorage, Server, $scope){
+app.controller('ordersCtrl', function($localStorage, Server, $scope) {
 
 
-    $scope.testData = Server.query({"userName" : "LOW JIAN SHENG"});
-    console.log($scope.testData);
+    $scope.testData = Server.query({"userName": $localStorage.user.userName}, function(){
+        console.log($scope.testData[0]);
+        console.log($scope.testData[1]);
+
+        if ($scope.testData.length === 0) {
+            $scope.testData.noOrder = "You currently do not have any orders.";
+            console.log($scope.testData.noOrder);
+        }
+        else {
+            $scope.testData.noOrder = undefined;
+        }
+    });
+
+
 
 
 });

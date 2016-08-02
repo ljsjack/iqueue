@@ -81,16 +81,69 @@
         </nav>
     </div>
 
-    <br><br><br><br>
+    <br><br><br>
+
     <div class="row">
-        <div class="col-lg-offset-2 col-lg-5">
-            <table>
-                <tr ng-repeat="x in testData">
-                    <td>{{x.userName}}</td>
-                    <td ng-repeat="y in x.orders">{{y.name}}</td>
-                    <td>${{x.total}}</td>
-                </tr>
-            </table>
+        <div class="text-center">
+            <h2>{{user.userName}}, please wait for your food.</h2>
+        </div>
+    </div>
+
+
+    <div class="row" style="padding-top:50px;">
+
+
+        <div class="col-sm-offset-4 col-sm-4">
+            <div class="well well-lg">
+                <div class ="row">
+                    <div class = "text-center">
+                        <div style="font-size:30px; font-family:'Allura';">Order</div>
+                    </div>
+                </div>
+
+                <div class = "row">
+
+                    <div class="text-center" style="padding-top: 5%;">
+                        {{testData.noOrder}}
+                    </div>
+
+                    <div class="row" ng-repeat="x in testData" style="padding-left:10%; padding-top:5%; padding-bottom:5%; padding-right:10%;">
+                        <div style="font-style:italic;">
+                            Order {{$index + 1}}
+                        </div>
+                        <table class="table">
+                            <tr>
+                                <th>Food</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr ng-repeat="y in x.orders">
+
+                                <td style="width: 70%;">
+                                    {{y.name}}
+                                </td>
+                                <td>
+
+                                    {{y.price | currency}}
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Total:
+                                </th>
+                                <td>
+                                    {{x.total | currency}}
+                                </td>
+
+                            </tr>
+
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
