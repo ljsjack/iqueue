@@ -185,7 +185,9 @@ app.factory('ivleInfo', function($http, $q){
 
 
 app.factory('Server', function($resource){
-    return $resource('/api/:id');
+    return $resource('/api/:id', null, {
+        'update': {method: 'PUT'}
+    });
 });
 
 
@@ -281,7 +283,7 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
     var totalCost = shoppingCart.totalCart();
 
 
-    var orderUp = {userName:"", orders:yourOrder, total : totalCost};
+    var orderUp = {userName:"", orders:yourOrder, total : totalCost, readyPickup: false};
 
     orderUp.userName = userName;
 
@@ -316,13 +318,13 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
 
 app.controller('storeCtrl', function($localStorage, Server, $scope){
 
-    $scope.allOrders = Server.query();
+    $scope.allOrders = Server.query({"readyPickup" : false});
 
     /*
      Gets the data from the database.
      */
     $scope.getData = function() {
-        $scope.allOrders = Server.query();
+        $scope.allOrders = Server.query({"readyPickup" : false});
     };
 
     /*
@@ -330,10 +332,16 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
      * It clears the whole order by the user when there are no more food orders. It will also
      clear the order from the data base.
      */
-    $scope.clearOrder = function(orderIndex,foodIndex){
+    $scope.clearOrder = function(orderIndex){
 
-        $scope.allOrders[orderIndex].orders.splice(foodIndex,1);
+        $scope.allOrders[orderIndex].readyPickup = true;
 
+        // Update the value of readyPickup in the database.
+        Server.update({id: $scope.allOrders[orderIndex]._id}, $scope.allOrders[orderIndex]);
+
+        $scope.allOrders.splice(orderIndex, 1);
+
+        /*
         if ($scope.allOrders[orderIndex].orders.length == 0){
             $scope.id = $scope.allOrders[orderIndex]._id;
             Server.remove({id: $scope.id}, function(){
@@ -341,6 +349,7 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
                 $scope.allOrders = Server.query();
             });
         }
+        */
     };
 
 
@@ -351,7 +360,7 @@ app.controller('ordersCtrl', function($localStorage, Server, $scope) {
 
     $scope.testData = Server.query({"userName": $localStorage.user.userName}, function(){
         console.log($scope.testData[0]);
-        console.log($scope.testData[1]);
+
 
         if ($scope.testData.length === 0) {
             $scope.testData.noOrder = "You currently do not have any orders.";
@@ -360,7 +369,18 @@ app.controller('ordersCtrl', function($localStorage, Server, $scope) {
         else {
             $scope.testData.noOrder = undefined;
         }
+
+        console.log($scope.testData);
     });
+
+    $scope.deleteData = function(index) {
+        var id = $scope.testData[index]._id;
+        Server.remove({id: id}, function(){
+            $scope.testData.splice(index, 1);
+        });
+
+    }
+
 
 
 

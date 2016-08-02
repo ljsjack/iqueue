@@ -6,7 +6,8 @@ var mongoose = restful.mongoose;
 var OrderSchema = new mongoose.Schema({
     userName : String,
     orders: [{name: String, price:Number ,count: Number}],
-    total: Number
+    total: Number,
+    readyPickup : Boolean
 });
 
 
