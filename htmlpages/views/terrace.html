@@ -271,11 +271,11 @@
         /*var name = $(".put-in-cart").attr("data-name");
          console.log(name);
          var price = Number($(".put-in-cart").attr("data-price"));*/
-        shoppingCart.addItemToCart(name, price, 1);
         if (price === undefined){
             alert("Please choose an item from the dropdown button!")
         }
         else {
+            shoppingCart.addItemToCart(name, price, 1);
             alert("Item added to cart!");
         }
         displayCart();
