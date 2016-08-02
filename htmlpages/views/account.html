@@ -143,6 +143,9 @@
         });
         $(".clear-cart").click(function(event){
             shoppingCart.clearCart();
+            alert("Cart cleared!");
+            name = null;
+            price = undefined;
             displayCart();
         });
          function displayCart() {
