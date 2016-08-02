@@ -392,6 +392,14 @@ app.controller('ordersCtrl', function($localStorage, Server, $scope) {
 });
 
 
+app.controller('terraceCtrl', function($scope){
+
+    $scope.foodlist = ['Chicken Rice','Duck Rice'];
+
+
+});
+
+
 /*
  Service to store the information of a user. Currently under construction.
 
