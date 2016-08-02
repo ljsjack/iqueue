@@ -280,7 +280,7 @@
         /*var name = $(".put-in-cart").attr("data-name");
          console.log(name);
          var price = Number($(".put-in-cart").attr("data-price"));*/
-        if (price === undefined && name === null){
+        if (price === undefined || name === null){
             alert("Please choose an item from the dropdown button!")
         }
         else {
