@@ -296,21 +296,25 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
      */
     $scope.checkOut = function(){
 
-        if (confirm("Are you sure you want to check out your order? This is irreversible.")){
-            console.log(orderUp);
-            $scope.newOrder = new Server(orderUp);
-            $scope.newOrder.$save();
-
-            // Destroying the local data
-            shoppingCart.clearCart();
-            alert("Order Sent! Redirecting to home.");
-            $state.go('order');
-
+        if(shoppingCart.countCart() === 0){
+            alert("Your cart is empty!")
         }
-        else{
+        else {
+            if (confirm("Are you sure you want to check out your order? This is irreversible.")) {
+                console.log(orderUp);
+                $scope.newOrder = new Server(orderUp);
+                $scope.newOrder.$save();
 
+                // Destroying the local data
+                shoppingCart.clearCart();
+                alert("Order Sent! Redirecting to home.");
+                $state.go('order');
+
+            }
+            else {
+
+            }
         }
-
     }
 
 });
