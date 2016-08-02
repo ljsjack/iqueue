@@ -240,7 +240,9 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
     $scope.logOut = function(){
 
         if (confirm("Any unsaved carts will be deleted! Are you sure you want to log out?")){
-            shoppingCart.clearCart();
+            if (shoppingCart != null){
+                shoppingCart.clearCart();
+            }
             $localStorage.user = null;
             $state.go('default');
         }
