@@ -241,6 +241,7 @@ app.controller('overallCtrl', function($rootScope, $location, $http, $scope, $lo
 
         if (confirm("Any unsaved carts will be deleted! Are you sure you want to log out?")){
             shoppingCart.clearCart();
+
             $localStorage.user = null;
             $state.go('default');
         }
@@ -346,14 +347,14 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
         $scope.allOrders.splice(orderIndex, 1);
 
         /*
-        if ($scope.allOrders[orderIndex].orders.length == 0){
-            $scope.id = $scope.allOrders[orderIndex]._id;
-            Server.remove({id: $scope.id}, function(){
-                $scope.allOrders.splice(orderIndex,1);
-                $scope.allOrders = Server.query();
-            });
-        }
-        */
+         if ($scope.allOrders[orderIndex].orders.length == 0){
+         $scope.id = $scope.allOrders[orderIndex]._id;
+         Server.remove({id: $scope.id}, function(){
+         $scope.allOrders.splice(orderIndex,1);
+         $scope.allOrders = Server.query();
+         });
+         }
+         */
     };
 
 
