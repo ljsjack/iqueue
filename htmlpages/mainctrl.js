@@ -281,6 +281,7 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
 
     var userName = $localStorage.user.userName;
     var yourOrder = shoppingCart.listCart();
+    console.log("listCart = " +yourOrder);
     var totalCost = shoppingCart.totalCart();
 
 
@@ -302,7 +303,7 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
         }
         else {
             if (confirm("Are you sure you want to check out your order? This is irreversible.")) {
-                console.log(orderUp);
+                console.log("order up = " + orderUp[0]);
                 $scope.newOrder = new Server(orderUp);
                 $scope.newOrder.$save();
 

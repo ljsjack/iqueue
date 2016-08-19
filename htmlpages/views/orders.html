@@ -116,12 +116,16 @@
                         <table class="table">
                             <tr>
                                 <th>Food</th>
+                                <th>Quantity</th>
                                 <th>Price</th>
                             </tr>
                             <tr ng-repeat="y in x.orders">
 
                                 <td style="width: 70%;">
                                     {{y.name}}
+                                </td>
+                                <td>
+                                    {{y.count}}
                                 </td>
                                 <td>
 
@@ -133,6 +137,9 @@
                                 <th>
                                     Total:
                                 </th>
+                                <td>
+
+                                </td>
                                 <td>
                                     {{x.total | currency}}
                                 </td>
