@@ -7,7 +7,8 @@ var OrderSchema = new mongoose.Schema({
     userName : String,
     orders: [{name: String, price:Number ,count: Number}],
     total: Number,
-    readyPickup : Boolean
+    readyPickup : Boolean,
+    readyAlert : Boolean
 });
 
 

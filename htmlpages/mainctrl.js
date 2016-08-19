@@ -284,7 +284,7 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
     var totalCost = shoppingCart.totalCart();
 
 
-    var orderUp = {userName:"", orders:yourOrder, total : totalCost, readyPickup: false};
+    var orderUp = {userName:"", orders:yourOrder, total : totalCost, readyAlert : false, readyPickup: false };
 
     orderUp.userName = userName;
 
@@ -308,8 +308,8 @@ app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
 
                 // Destroying the local data
                 shoppingCart.clearCart();
-                alert("Order Sent! Redirecting to home.");
-                $state.go('order');
+                alert("Order Sent! Redirecting to orders.");
+                $state.go("order");
 
             }
             else {
@@ -360,11 +360,10 @@ app.controller('storeCtrl', function($localStorage, Server, $scope){
 
 });
 
-app.controller('ordersCtrl', function($localStorage, Server, $scope) {
+app.controller('ordersCtrl', function($localStorage, Server, $scope, $state) {
 
 
     $scope.testData = Server.query({"userName": $localStorage.user.userName}, function(){
-        console.log($scope.testData[0]);
 
 
         if ($scope.testData.length === 0) {
@@ -375,8 +374,24 @@ app.controller('ordersCtrl', function($localStorage, Server, $scope) {
             $scope.testData.noOrder = undefined;
         }
 
-        console.log($scope.testData);
     });
+
+    // Fetches data from the database every 5 seconds. To alert the user when the order is ready.
+    // Fetches data only if there are orders.
+    window.setInterval(function(){
+        $scope.checkReady = Server.query({"userName" : $localStorage.user.userName}, function(){
+            for (var order in $scope.checkReady){
+                if ($scope.checkReady[order].readyPickup == true && $scope.checkReady[order].readyAlert == false){
+                    alert("You have an order ready!");
+                    $scope.checkReady[order].readyAlert = true;
+                    Server.update({id: $scope.checkReady[order]._id}, $scope.checkReady[order]);
+                    location.reload();
+                }
+            }
+        });
+
+    }, 5000);
+
 
     $scope.deleteData = function(index) {
         var id = $scope.testData[index]._id;
@@ -387,16 +402,15 @@ app.controller('ordersCtrl', function($localStorage, Server, $scope) {
     }
 
 
-
-
-
 });
 
 
 app.controller('terraceCtrl', function($scope){
 
-    $scope.foodlist = ['Chicken Rice','Duck Rice'];
-
+if ($scope.code == 'crt'){
+    console.log("i'm here");
+    $scope.test = 'This is Cool';
+}
 
 });
 

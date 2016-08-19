@@ -11,6 +11,7 @@ var shoppingCart = (function () {
         this.count = count;
     }
 
+
     function saveCart() {
         localStorage.setItem("shoppingCart", JSON.stringify(cart));
     }
