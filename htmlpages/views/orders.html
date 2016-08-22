@@ -122,14 +122,14 @@
                             <tr ng-repeat="y in x.orders">
 
                                 <td style="width: 70%;">
-                                    {{y.name}} x {{y.count}}
+                                    {{y.name}}
                                 </td>
                                 <td>
                                     {{y.count}}
                                 </td>
                                 <td>
 
-                                    {{y.price | currency}}
+                                    {{y.price * y.count | currency}}
 
                                 </td>
                             </tr>

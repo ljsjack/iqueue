@@ -279,24 +279,20 @@ app.controller('firstPageCtrl', function($location, $scope, $rootScope, $localSt
 
 app.controller('accountCtrl', function($localStorage, $scope, Server, $state){
 
-    var userName = $localStorage.user.userName;
-    var yourOrder = shoppingCart.listCart();
-    console.log("listCart = " +yourOrder);
-    var totalCost = shoppingCart.totalCart();
-
-
-    var orderUp = {userName:"", orders:yourOrder, total : totalCost, readyAlert : false, readyPickup: false };
-
-    orderUp.userName = userName;
-
-
-
-
     /*
      Checkout function sends the order data into the database.
      The localStorage of order data is also destroyed.
      */
     $scope.checkOut = function(){
+        var userName = $localStorage.user.userName;
+        var yourOrder = shoppingCart.listCart();
+        console.log("listCart = " +yourOrder);
+        var totalCost = shoppingCart.totalCart();
+
+
+        var orderUp = {userName:"", orders:yourOrder, total : totalCost, readyAlert : false, readyPickup: false };
+
+        orderUp.userName = userName;
 
         if(shoppingCart.countCart() === 0){
             alert("Your cart is empty!")
